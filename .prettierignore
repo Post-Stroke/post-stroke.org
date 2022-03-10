@@ -1,0 +1,10 @@
+# Dependency directories
+package-lock.json
+node_modules/
+jspm_packages/
+
+#Build
+_site
+
+#Generated hash data
+_data/hash.json
