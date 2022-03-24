@@ -1,7 +1,222 @@
 ---
-title: Post Stroke
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+title: Stroke Recovery Resources
+description: A nonprofit empowering stroke survivors with free, engaging, and proven stroke recovery information in a way that everyone can understand and act on.
 layout: layouts/base.njk
+featured_youtube_video: vmGGfkco880
+email_form_headline: Get Actionable Recovery Tips 3 Days a Week
+email_form_body:
+  Get our free pocket guide to stroke recovery and actionable tips sent
+  to your inbox, so you can continue your recovery journey at home.
 ---
 
-<h1>Homepage</h1>
+<div class="relative">
+  <!-- Green Bar -->
+  <div class="absolute inset-0 h-56 bg-ficus sm:h-80"></div>
+
+  <!-- Logo -->
+  <h1 class="relative text-center z-10">
+    <a href="/">
+      <span class="sr-only">{{ site.title }}</span>
+      <svg
+        class="my-6 sm:my-7 inline-block w-36 sm:w-48 h-auto fill-white"
+        viewBox="0 0 191 62"
+        aria-hidden="true"
+      >
+        <use xlink:href="/assets/images/icon-sprite.svg#logo"></use>
+      </svg>
+    </a>
+  </h1>
+
+  <main>
+    <div
+      class="relative z-10 mb-5 sm:mb-14 bg-page sm:border border-border mx-auto sm:rounded-xl p-4 sm:max-w-[37.5rem] sm:p-6"
+    >
+      <h2 class="font-serif mb-4 text-xl md:text-2xl">Recovery Resources</h2>
+      <!-- Recent YouTube Video -->
+      <lite-youtube
+        class="mb-5 rounded-xl"
+        videoid="{{ featured_youtube_video }}"
+        params="modestbranding=1&rel=0"
+        style="
+            background-image: url('https://i.ytimg.com/vi/{{ featured_youtube_video }}/maxresdefault.jpg');
+          "
+      ></lite-youtube>
+
+      <ul class="divide-border divide-y mb-0 flex flex-col divide-solid">
+        <!-- YouTube -->
+        <li
+          class="group relative flex items-center gap-4 py-4 first:pt-0 last:pb-0"
+        >
+          <div
+            class="bg-page-offset flex h-16 w-16 flex-shrink-0 items-center justify-center self-stretch rounded-xl transition-opacity group-hover:opacity-70 sm:h-[4.375rem] sm:w-[4.375rem]"
+          >
+            <svg class="w-9 sm:w-10 fill-[#E73223]">
+              <use xlink:href="/assets/images/icon-sprite.svg#youtube"></use>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3
+              class="font-serif text-body text-base md:text-lg md:leading-none"
+            >
+              <a
+                class="stretched-link group-hover:text-primary transition-colors sm:text-xl"
+                href="{{ site.youtube }}"
+              >
+                YouTube
+                <svg
+                  class="svg-icon text-ficus-light transition-transform group-hover:translate-x-1"
+                >
+                  <use
+                    xlink:href="/assets/images/icon-sprite.svg#arrow-right"
+                  ></use>
+                </svg>
+              </a>
+            </h3>
+            <p class="text-body-offset text-sm leading-snug sm:text-base">
+              Weekly videos to help you in your stroke recovery journey.
+            </p>
+          </div>
+        </li>
+
+        <!-- Instagram -->
+        <li
+          class="group relative flex items-center gap-4 py-4 first:pt-0 last:pb-0"
+        >
+          <div
+            class="bg-page-offset flex h-16 w-16 flex-shrink-0 items-center justify-center self-stretch rounded-xl transition-opacity group-hover:opacity-70 sm:h-[4.375rem] sm:w-[4.375rem]"
+          >
+            <svg class="w-9 fill-[#E1306C]">
+              <use xlink:href="/assets/images/icon-sprite.svg#instagram"></use>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3
+              class="font-serif text-body text-base md:text-lg md:leading-none"
+            >
+              <a
+                class="stretched-link group-hover:text-primary transition-colors sm:text-xl"
+                href="{{ site.instagram }}"
+              >
+                Instagram
+                <svg
+                  class="svg-icon text-ficus-light transition-transform group-hover:translate-x-1"
+                >
+                  <use
+                    xlink:href="/assets/images/icon-sprite.svg#arrow-right"
+                  ></use>
+                </svg>
+              </a>
+            </h3>
+            <p class="text-body-offset text-sm leading-snug sm:text-base">
+              Quick tips, inspiration, and short recovery videos.
+            </p>
+          </div>
+        </li>
+
+        <!-- TikTok -->
+        <li
+          class="group relative flex items-center gap-4 py-4 first:pt-0 last:pb-0"
+        >
+          <div
+            class="bg-page-offset flex h-16 w-16 flex-shrink-0 items-center justify-center self-stretch rounded-xl transition-opacity group-hover:opacity-70 sm:h-[4.375rem] sm:w-[4.375rem]"
+          >
+            <svg class="w-9 sm:w-10 fill-current">
+              <use xlink:href="/assets/images/icon-sprite.svg#tiktok"></use>
+            </svg>
+          </div>
+          <div class="flex-1">
+            <h3
+              class="font-serif text-body text-base md:text-lg md:leading-none"
+            >
+              <a
+                class="stretched-link group-hover:text-primary transition-colors sm:text-xl"
+                href="{{ site.tiktok }}"
+              >
+                TikTok
+                <svg
+                  class="svg-icon text-ficus-light transition-transform group-hover:translate-x-1"
+                >
+                  <use
+                    xlink:href="/assets/images/icon-sprite.svg#arrow-right"
+                  ></use>
+                </svg>
+              </a>
+            </h3>
+            <p class="text-body-offset text-sm leading-snug sm:text-base">
+              Quick recovery tips with ocascional dancing.
+            </p>
+          </div>
+        </li>
+        <!-- Donate -->
+        <li
+          class="group relative flex items-center gap-4 py-4 first:pt-0 last:pb-0"
+        >
+          <div
+            class="bg-page-offset flex h-16 w-16 flex-shrink-0 items-center justify-center self-stretch rounded-xl transition-opacity group-hover:opacity-70 sm:h-[4.375rem] sm:w-[4.375rem]"
+          >
+            <img
+              class="w-11 sm:w-auto"
+              src="/assets/images/paypal-icon.svg"
+              alt="PayPal Icon"
+            />
+          </div>
+          <div class="flex-1">
+            <h3
+              class="font-serif text-body text-base md:text-lg md:leading-none"
+            >
+              <a
+                class="stretched-link group-hover:text-primary transition-colors sm:text-xl"
+                href="{{ site.paypal }}"
+                >Donate
+                <svg
+                  class="svg-icon text-ficus-light transition-transform group-hover:translate-x-1"
+                >
+                  <use
+                    xlink:href="/assets/images/icon-sprite.svg#arrow-right"
+                  ></use>
+                </svg>
+              </a>
+            </h3>
+            <p class="text-body-offset text-sm leading-snug sm:text-base">
+              Support our mission to make stroke recovery more accesible.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <section class="bg-page-offset py-9 md:py-12">
+      <div
+        class="container grid items-center justify-center gap-y-5 gap-x-4 md:grid-cols-[400px,auto] lg:grid-cols-[465px,auto] lg:gap-x-14"
+      >
+        <!-- Image -->
+        <img
+          class="mx-auto w-64 md:order-last md:w-80 lg:mb-0 lg:w-auto"
+          src="/assets/images/elyse-pointing-square.png"
+          srcset="
+            /assets/images/elyse-pointing-square.png,
+            /assets/images/elyse-pointing-square@2x.png 2x
+          "
+          width="384"
+          height="380"
+          alt="Elyse Newland smiling and pointing to a multi-colored medical model of a human brain"
+          loading="lazy"
+        />
+
+        <!-- Form Body -->
+        <div class="max-w-lg">
+          <h2 class="font-serif mb-2 md:mb-4 text-2xl md:text-3xl lg:text-4xl">
+            {{ email_form_headline }}
+          </h2>
+
+          <p class="text-body-offset mb-6 text-base md:text-lg">
+            {{ email_form_body }}
+          </p>
+
+          <!-- Tips Signup Form -->
+          {% include "tips-email-form.html" %}
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

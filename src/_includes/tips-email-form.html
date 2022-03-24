@@ -1,0 +1,26 @@
+<form
+  action="https://app.convertkit.com/forms/1922972/subscriptions"
+  method="post"
+>
+  <div class="flex flex-col items-stretch gap-3 sm:flex-row">
+    <input
+      class="border-border focus:border-primary focus:ring-primary flex-1 rounded-lg"
+      name="email_address"
+      aria-label="Your Email"
+      placeholder="Your Email"
+      required
+      oninvalid="setCustomValidity('Required: Please provide your email')"
+      oninput="setCustomValidity('')"
+      type="email"
+    />
+    <button
+      data-element="submit"
+      class="btn btn-primary inline-block text-base"
+    >
+      Send Me Tips
+      <svg class="svg-icon">
+        <use xlink:href="/assets/images/icon-sprite.svg#arrow-right"></use>
+      </svg>
+    </button>
+  </div>
+</form>
