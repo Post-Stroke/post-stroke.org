@@ -46,6 +46,19 @@
 
   /* Dark Theme */
   @media (prefers-color-scheme: dark) {
+    --page: var(--black);
+    --page-offset: var(--gray-900);
+
+    --body: var(--white);
+    --body-offset: var(--gray-500);
+    --body-muted: var(--gray-600);
+    --border: var(--gray-800);
+
+    --primary: var(--ficus-light);
+    --primary-offset: hsl(116, 25%, 70%);
+    --primary-underline: var(--ficus-light);
+    --primary-underline-offset: var(--ficus-light);
+    --primary-reverse: var(--black);
   }
 }
 
@@ -54,12 +67,24 @@
   font-style: normal;
   font-weight: bold;
   font-stretch: normal;
-  size-adjust: 150%;
-  src: local("Skillet Regular"),
-    url("../assets/fonts/skillet-regular.woff2") format("woff2"),
+  src: url("../assets/fonts/skillet-regular.woff2") format("woff2"),
     /* will be preloaded */ url("../assets/fonts/skillet-regular.woff")
       format("woff");
   font-display: swap;
+}
+
+.font-serif {
+  font-weight: bold;
+}
+
+::selection {
+  color: var(--black);
+  background: hsl(116, 25%, 80%);
+
+  @media (prefers-color-scheme: dark) {
+    color: var(--white);
+    background: var(--ficus-dark);
+  }
 }
 
 .svg-icon {

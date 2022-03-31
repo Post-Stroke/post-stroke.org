@@ -15,7 +15,7 @@ module.exports = {
         "Apple Color Emoji",
         "Segoe UI Emoji",
       ],
-      serif: ["Skillet Regular", "sans-serif"],
+      serif: ["Skillet Regular", "serif"],
     },
 
     // Colors

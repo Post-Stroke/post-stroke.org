@@ -1,5 +1,6 @@
 const htmlmin = require("html-minifier");
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
+const pluginSEO = require("eleventy-plugin-seo");
 
 module.exports = function (eleventyConfig) {
   /**
@@ -14,6 +15,9 @@ module.exports = function (eleventyConfig) {
    */
   eleventyConfig.addPassthroughCopy("assets/images");
   eleventyConfig.addPassthroughCopy("assets/fonts");
+
+  // SEO Plugin
+  eleventyConfig.addPlugin(pluginSEO, require("./_data/seo.json"));
 
   /**
    * HTML Minifier for production builds
