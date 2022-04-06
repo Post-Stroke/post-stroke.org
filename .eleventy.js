@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
    * Files to copy
    * https://www.11ty.dev/docs/copy/
    */
+  eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("assets/images");
   eleventyConfig.addPassthroughCopy("assets/fonts");
   eleventyConfig.addPassthroughCopy("_redirects");
