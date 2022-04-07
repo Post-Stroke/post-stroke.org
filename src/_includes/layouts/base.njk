@@ -43,7 +43,7 @@
     {% block content %} {{ content | safe }} {% endblock %}
 
     {% if myProject.environment == "production" %}
-      <script defer data-domain="post-stroke.org" src="https://plausible.io/js/plausible.js"></script>
+      <script defer data-domain="post-stroke.org" src="/js/script.js"></script>
     {% endif %}
   </body>
 </html>
