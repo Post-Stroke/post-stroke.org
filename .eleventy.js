@@ -1,7 +1,6 @@
 const htmlmin = require("html-minifier");
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const pluginSEO = require("eleventy-plugin-seo");
-const isProd = process.env.ELEVENTY_ENV == "production";
 
 module.exports = function (eleventyConfig) {
   /**
@@ -43,6 +42,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    environment: process.env.MY_ENVIRONMENT || "development",
     dir: {
       input: "src",
       data: "../_data",

@@ -42,7 +42,7 @@
   <body class="antialiased bg-page text-body">
     {% block content %} {{ content | safe }} {% endblock %}
 
-    {% if env.isProd %}
+    {% if myProject.environment == "production" %}
       <script defer data-domain="post-stroke.org" src="https://plausible.io/js/plausible.js"></script>
     {% endif %}
   </body>
