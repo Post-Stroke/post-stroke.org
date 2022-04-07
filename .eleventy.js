@@ -42,7 +42,6 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    environment: process.env.MY_ENVIRONMENT || "development",
     dir: {
       input: "src",
       data: "../_data",
