@@ -41,5 +41,9 @@
 
   <body class="antialiased bg-page text-body">
     {% block content %} {{ content | safe }} {% endblock %}
+
+    {% if env.isProd %}
+      <script defer data-domain="post-stroke.org" src="https://plausible.io/js/plausible.js"></script>
+    {% endif %}
   </body>
 </html>
