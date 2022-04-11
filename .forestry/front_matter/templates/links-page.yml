@@ -11,6 +11,7 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: text
   name: featured_youtube_video
   label: featured_youtube_video
