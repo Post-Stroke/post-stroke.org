@@ -3,7 +3,11 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
+- type: document
+  path: src/index.html
+  label: Links Page
+  match: "**/*"
 upload_dir: assets/images
 public_path: assets/images
 front_matter_path: ''
