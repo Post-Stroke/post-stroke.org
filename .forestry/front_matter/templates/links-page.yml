@@ -1,0 +1,22 @@
+---
+label: Links Page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: description
+  label: description
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: featured_youtube_video
+  label: featured_youtube_video
+- type: text
+  name: email_form_headline
+  label: email_form_headline
+- type: textarea
+  name: email_form_body
+  label: email_form_body
