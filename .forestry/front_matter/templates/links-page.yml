@@ -21,3 +21,5 @@ fields:
 - type: textarea
   name: email_form_body
   label: email_form_body
+pages:
+- src/index.html
