@@ -1,6 +1,12 @@
 const htmlmin = require("html-minifier");
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 const pluginSEO = require("eleventy-plugin-seo");
+const markdownIt = require("markdown-it");
+
+// Add within your config module
+const md = new markdownIt({
+  html: true,
+});
 
 module.exports = function (eleventyConfig) {
   /**
@@ -23,6 +29,11 @@ module.exports = function (eleventyConfig) {
 
   // Add Year Shortcode
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  // Markdown
+  eleventyConfig.addFilter("markdown", (content) => {
+    return md.render(content);
+  });
 
   /**
    * HTML Minifier for production builds

@@ -105,6 +105,10 @@
   @apply pointer-events-auto absolute inset-0 z-10;
 }
 
+.cms-content>p {
+  @apply text-base text-body-muted mb-5;
+}
+
 /* -------------- */
 /* Buttons        */
 /* -------------- */
