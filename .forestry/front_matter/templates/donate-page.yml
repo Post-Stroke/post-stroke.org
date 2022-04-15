@@ -32,3 +32,5 @@ fields:
     schema:
       format: markdown
   label: Body
+pages:
+- src/index.html
