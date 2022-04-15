@@ -58,8 +58,7 @@ fields:
 - type: textarea
   name: donation-prompt
   label: Prompt
-  description: This is the message we're encouraging folks to share on social media.
-    Keep it short enough for Twitter's limit.
+  description: Keep it short enough for Twitter's limit.
   config:
     required: true
 pages:
