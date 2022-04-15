@@ -1,13 +1,15 @@
 ---
 layout: layouts/page.njk
 title: Thank You!
-excerpt: Your donation will directly help stroke survivors by allowing us to create
+excerpt:
+  Your donation will directly help stroke survivors by allowing us to create
   more free stroke recovery education. We can keep everything we do free because of
   generous people like you.
 permalink: thanks-for-the-donation/
-donation-prompt: 'I just donated to Post Stroke to fund the creation of free, accessible,
+donation-prompt:
+  "I just donated to Post Stroke to fund the creation of free, accessible,
   and proven stroke recovery information for survivors across the globe. Help them
-  reach more people! #poststroke #strokerecovery #strokerehab #nonprofit'
+  reach more people! #poststroke #strokerecovery #strokerehab #nonprofit"
 donation-url: "/donate"
 headline: Thank You!
 body: |-
@@ -15,11 +17,12 @@ body: |-
 
   We can't thank you enough!
 share_headline: Inspire Others to Help
-share_body: No pressure, but sharing your donation on social media might inspire others
+share_body:
+  No pressure, but sharing your donation on social media might inspire others
   to help. Thanks again!
-prompt_headline: 'Share this:'
-
+prompt_headline: "Share this:"
 ---
+
 <!-- Image -->
 <img
   class="w-full mb-5 rounded-xl"
@@ -34,13 +37,8 @@ prompt_headline: 'Share this:'
   loading="lazy"
 />
 
-<h2 class="font-serif mb-2 text-2xl sm:text-3xl">{{ title }}</h2>
-<p class="text-base text-body-muted mb-5">
-  Your donation will directly help stroke survivors by allowing us to create
-  more free stroke recovery education. We can keep everything we do free because
-  of generous people like you.
-</p>
-<p class="text-base text-body-muted">We can't thank you enough!</p>
+<h2 class="font-serif mb-2 text-2xl sm:text-3xl">{{ headline }}</h2>
+<div class="cms-content">{{ body | markdown }}</div>
 
 <!-- Signature -->
 <svg
@@ -69,22 +67,20 @@ prompt_headline: 'Share this:'
 
 <hr class="my-10 diamond-divider" />
 
-<h2 class="font-serif mb-2 text-2xl sm:text-3xl">Inspire Others to Help</h2>
-<p class="text-base text-body-muted mb-5">
-  No pressure, but sharing your donation on social media might inspire others to
-  help. Thanks again!
-</p>
+<h2 class="font-serif mb-2 text-2xl sm:text-3xl">{{ share_headline }}</h2>
+<p class="text-base text-body-muted mb-5">{{ share_body }}</p>
 
-<h3 class="font-serif mb-2 text-lg sm:text-xl">Share this:</h3>
+<h3 class="font-serif mb-2 text-lg sm:text-xl">{{ prompt_headline }}</h3>
 <p class="text-base text-body-offset bg-page-offset p-4 rounded-xl">
   {{ donation-prompt }}
 </p>
 
-<!-- <ul class="mt-4 flex items-center gap-3 text-3xl">
+<!-- Social Share Buttons -->
+<ul class="mt-4 flex items-center gap-3 text-3xl">
   <li>
     <a
       class="flex items-center justify-center rounded-full bg-page-offset w-12 h-12 p-3 hover:opacity-80"
-      href="https://www.facebook.com/sharer.php?u={{ site.url | url_encode }}{{ donation-url | url_encode }}"
+      href="https://www.facebook.com/sharer.php?u={{ site.url | url_encode }}"
       rel="noopener"
       target="_blank"
     >
@@ -96,7 +92,7 @@ prompt_headline: 'Share this:'
   </li>
   <li>
     <a
-      href="https://twitter.com/intent/tweet?text={{ donation-prompt | url_encode }}&url={{ site.url | url_encode }}{{ donation-url | url_encode }}&via=poststrokeorg"
+      href="https://twitter.com/intent/tweet?text={{ donation-prompt | url_encode }}&url={{ site.url | url_encode }}&via=poststrokeorg"
       rel="noopener"
       target="_blank"
       class="flex items-center justify-center rounded-full bg-page-offset w-12 h-12 p-3 hover:opacity-80"
@@ -110,16 +106,15 @@ prompt_headline: 'Share this:'
 
   <li>
     <a
-      href=""
       class="flex items-center justify-center rounded-full bg-page-offset w-12 h-12 p-3 hover:opacity-80"
-      href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url | url_encode }}{{ donation-url | url_encode }}"
+      href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url | url_encode }}"
       rel="noopener"
       target="_blank"
     >
       <svg class="svg-icon text-[#0A66C2]">
         <use xlink:href="/assets/images/icon-sprite.svg#linkedin"></use>
       </svg>
-      <span class="sr-only">Share On Twitter</span>
+      <span class="sr-only">Share On LinkedIn</span>
     </a>
   </li>
-</ul> -->
+</ul>
