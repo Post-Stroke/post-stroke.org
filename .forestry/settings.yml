@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: src/index.html
+  path: src/resources.html
   label: Links Page
 upload_dir: assets/images
 public_path: assets/images
