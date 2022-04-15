@@ -30,6 +30,10 @@ module.exports = {
       ficus: "var(--ficus)",
       "ficus-light": "var(--ficus-light)",
 
+      "peach-dark": "var(--peach-dark)",
+      peach: "var(--peach)",
+      "peach-light": "var(--peach-light)",
+
       // View / Component Backgrounds
       page: "var(--page)",
       "page-offset": "var(--page-offset)",

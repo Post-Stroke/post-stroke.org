@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="relative grid min-h-screen grid-rows-[auto_1fr_auto]">
+  <header>
+    <!-- Green Bar -->
+    <div class="absolute inset-0 h-56 bg-ficus dark:bg-ficus-dark sm:h-80"></div>
+
+    <!-- Logo -->
+    <h1 class="relative text-center z-10">
+      <a href="/">
+        <span class="sr-only">{{ site.title }}</span>
+        <svg
+          class="my-6 sm:my-7 inline-block w-36 sm:w-48 h-auto fill-white"
+          viewBox="0 0 191 62"
+          aria-hidden="true"
+        >
+          <use xlink:href="/assets/images/icon-sprite.svg#logo"></use>
+        </svg>
+      </a>
+    </h1>
+  </header>
+
+  <main>
+    <div
+      class="relative z-10 mb-5 sm:mb-14 bg-page sm:border border-border mx-auto sm:rounded-xl p-4 sm:max-w-[38rem] sm:p-8"
+    >
+
+      <nav class="mb-6 font-serif text-body-offset text-lg">
+        <ol class="flex gap-6">
+          <li>
+            <a {% if page.url == "/" or 'donation' in page.url %} class="underline underline-offset-8 decoration-[3px] decoration-peach text-body" aria-current="page"{% endif %} href="/">Donate</a>
+          </li>
+          <li>
+            <a {% if '/links' in page.url or 'signup-success' in page.url %}class="underline underline-offset-8 decoration-[3px] decoration-peach text-body" aria-current="page"{% endif %} href="/links">Resources</a>
+          </li>
+        </ol>
+      </nav>
+
+    {% block content %} {{ content | safe }} {% endblock %}
+
+    </div>
+
+    {% if page.url == "/links/" %}
+    <section class="bg-page-offset py-9 md:py-12 border-b border-border">
+      <div
+        class="container grid items-center justify-center gap-y-5 gap-x-4 md:grid-cols-[1fr,auto] lg:grid-cols-[465px,auto] lg:gap-x-14"
+      >
+        <!-- Image -->
+        <img
+          class="mx-auto w-64 md:order-last sm:w-80 lg:mb-0 lg:w-auto"
+          src="/assets/images/elyse-pointing-square.png"
+          srcset="
+            /assets/images/elyse-pointing-square.png,
+            /assets/images/elyse-pointing-square@2x.png 2x
+          "
+          width="384"
+          height="380"
+          alt="Elyse Newland smiling and pointing to a multi-colored medical model of a human brain"
+          loading="lazy"
+        />
+
+        <!-- Form Body -->
+        <div class="max-w-lg">
+          <h2 class="font-serif mb-2 md:mb-4 text-2xl md:text-3xl lg:text-4xl">
+            {{ email_form_headline }}
+          </h2>
+
+          <p class="text-body-offset mb-6 text-base md:text-lg">
+            {{ email_form_body }}
+          </p>
+
+          <!-- Tips Signup Form -->
+          {% include "tips-email-form.html" %}
+        </div>
+      </div>
+    </section>
+    {% endif %}
+  </main>
+
+  {% include "footer.html" %}
+</div>

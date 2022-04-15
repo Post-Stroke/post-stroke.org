@@ -21,6 +21,9 @@ module.exports = function (eleventyConfig) {
   // SEO Plugin
   eleventyConfig.addPlugin(pluginSEO, require("./_data/seo.json"));
 
+  // Add Year Shortcode
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
   /**
    * HTML Minifier for production builds
    */

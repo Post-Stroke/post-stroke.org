@@ -1,0 +1,64 @@
+<footer class="bg-page-offset">
+  <div
+    class="container flex gap-5 flex-wrap justify-center flex-col sm:flex-row sm:justify-between items-center p-8"
+  >
+    <!-- Copyright -->
+    <ul
+      class="square-list flex flex-wrap gap-y-1.5 justify-center items-center text-sm text-body-muted"
+    >
+      <li>&copy; {% year %} {{ site.title }}</li>
+      <!-- <li>
+        <a
+          class="hover:text-primary hover:underline underline-offset-4"
+          href="#"
+        >
+          Privacy Policy
+        </a>
+      </li>
+      <li>
+        <a
+          class="hover:text-primary hover:underline underline-offset-4"
+          href="#"
+        >
+          Contact
+        </a>
+      </li> -->
+    </ul>
+
+    <!-- Social Icons -->
+    <ul class="flex items-center gap-4 text-2xl order-first sm:order-2">
+      <li>
+        <a href="{{ site.youtube }}">
+          <span class="sr-only">YouTube</span>
+          <svg class="svg-icon text-primary hover:text-primary-offset">
+            <use xlink:href="/assets/images/icon-sprite.svg#youtube"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.instagram }}">
+          <span class="sr-only">Instagram</span>
+          <svg class="svg-icon text-primary hover:text-primary-offset">
+            <use xlink:href="/assets/images/icon-sprite.svg#instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.tiktok }}">
+          <span class="sr-only">TikTok</span>
+          <svg class="svg-icon text-primary hover:text-primary-offset">
+            <use xlink:href="/assets/images/icon-sprite.svg#tiktok"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="{{ site.twitter }}">
+          <span class="sr-only">Twitter</span>
+          <svg class="svg-icon text-primary hover:text-primary-offset">
+            <use xlink:href="/assets/images/icon-sprite.svg#twitter"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>

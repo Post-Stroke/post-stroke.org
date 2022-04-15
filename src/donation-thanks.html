@@ -1,49 +1,36 @@
 ---
 layout: layouts/page.njk
-title: Donate
-excerpt: Support our mission to make stroke recovery accessible to everyone.
+title: Thank You!
+excerpt: Your donation will directly help stroke survivors by allowing us to create more free stroke recovery education. We can keep everything we do free because of generous people like you.
+permalink: "thanks-for-the-donation/"
+donation-prompt:
+  "I just donated to Post Stroke to fund the creation of free, accessible, and
+  proven stroke recovery information for survivors across the globe. Help them
+  reach more people! #poststroke #strokerecovery #strokerehab #nonprofit"
+donation-url: "/donate"
 ---
 
 <!-- Image -->
 <img
   class="w-full mb-5 rounded-xl"
-  src="/assets/images/donate.jpg"
-  srcset="/assets/images/donate.jpg, /assets/images/donate@2x.jpg 2x"
+  src="/assets/images/donation-thanks.jpg"
+  srcset="
+    /assets/images/donation-thanks.jpg,
+    /assets/images/donation-thanks@2x.jpg 2x
+  "
   width="550"
   height="320"
-  alt="Elyse smiling and demonstrating how to perform a stretch to improve spasticity after stroke"
+  alt="Black and white portrait of Elyse smiling with her back against a textured metal wall."
   loading="lazy"
 />
 
-<h2 class="font-serif mb-2 text-2xl sm:text-3xl">
-  We’re on a mission to make stroke recovery accessible to everyone!
-</h2>
+<h2 class="font-serif mb-2 text-2xl sm:text-3xl">{{ title }}</h2>
 <p class="text-base text-body-muted mb-5">
-  We're not another nonprofit looking for funding to create dense brochures of
-  medical information nobody reads. Our approach to helping stroke survivors is
-  to meet them where they are, using language they’ll understand.
+  Your donation will directly help stroke survivors by allowing us to create
+  more free stroke recovery education. We can keep everything we do free because
+  of generous people like you.
 </p>
-<p class="text-base text-body-muted mb-5">
-  Instead of wasting a ton of effort and money to get survivors to come to us,
-  we go to them. Monthly, Facebook has 2.9 billion users, YouTube has 2 billion,
-  Instagram has 2 billion, and TikTok has 1 billion.
-</p>
-<p class="text-base text-body-muted mb-5">
-  Our recovery education lives on these hugely popular social platforms. We're
-  not wasting time and money building yet another stroke recovery website we
-  hope some survivors might join.
-</p>
-<p class="text-base text-body-muted mb-5">
-  Until now, we've used our own money to fund the creation of this education.
-  We're incredibly proud of what we've built thus far, but we want to reach more
-  survivors. We want to work with more passionate experts to share their
-  knowledge. We want to create the best recovery content online.
-</p>
-<p class="text-base text-body-muted mb-5">
-  Everything we do will remain free and frictionless for the growing community
-  of stroke survivors who are already overwhelmed.
-</p>
-<p class="text-base text-body-muted mb-5">To do more, we need your help.</p>
+<p class="text-base text-body-muted">We can't thank you enough!</p>
 
 <!-- Signature -->
 <svg
@@ -72,12 +59,57 @@ excerpt: Support our mission to make stroke recovery accessible to everyone.
 
 <hr class="my-10 diamond-divider" />
 
-<a
-  href="{{ site.paypal }}"
-  class="btn btn-primary inline-block text-base lg:text-lg"
->
-  Donate via PayPal
-  <svg class="svg-icon">
-    <use xlink:href="/assets/images/icon-sprite.svg#arrow-right"></use>
-  </svg>
-</a>
+<h2 class="font-serif mb-2 text-2xl sm:text-3xl">Inspire Others to Help</h2>
+<p class="text-base text-body-muted mb-5">
+  No pressure, but sharing your donation on social media might inspire others to
+  help. Thanks again!
+</p>
+
+<h3 class="font-serif mb-2 text-lg sm:text-xl">Share this:</h3>
+<p class="text-base text-body-offset bg-page-offset p-4 rounded-xl">
+  {{ donation-prompt }}
+</p>
+
+<!-- <ul class="mt-4 flex items-center gap-3 text-3xl">
+  <li>
+    <a
+      class="flex items-center justify-center rounded-full bg-page-offset w-12 h-12 p-3 hover:opacity-80"
+      href="https://www.facebook.com/sharer.php?u={{ site.url | url_encode }}{{ donation-url | url_encode }}"
+      rel="noopener"
+      target="_blank"
+    >
+      <svg class="svg-icon text-[#4267B2]">
+        <use xlink:href="/assets/images/icon-sprite.svg#facebook"></use>
+      </svg>
+      <span class="sr-only">Share On Facebook</span>
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://twitter.com/intent/tweet?text={{ donation-prompt | url_encode }}&url={{ site.url | url_encode }}{{ donation-url | url_encode }}&via=poststrokeorg"
+      rel="noopener"
+      target="_blank"
+      class="flex items-center justify-center rounded-full bg-page-offset w-12 h-12 p-3 hover:opacity-80"
+    >
+      <svg class="svg-icon text-[#1DA1F2]">
+        <use xlink:href="/assets/images/icon-sprite.svg#twitter"></use>
+      </svg>
+      <span class="sr-only">Share On Twitter</span>
+    </a>
+  </li>
+
+  <li>
+    <a
+      href=""
+      class="flex items-center justify-center rounded-full bg-page-offset w-12 h-12 p-3 hover:opacity-80"
+      href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url | url_encode }}{{ donation-url | url_encode }}"
+      rel="noopener"
+      target="_blank"
+    >
+      <svg class="svg-icon text-[#0A66C2]">
+        <use xlink:href="/assets/images/icon-sprite.svg#linkedin"></use>
+      </svg>
+      <span class="sr-only">Share On Twitter</span>
+    </a>
+  </li>
+</ul> -->
