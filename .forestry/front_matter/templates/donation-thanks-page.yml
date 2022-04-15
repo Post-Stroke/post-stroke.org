@@ -62,3 +62,5 @@ fields:
     Keep it short enough for Twitter's limit.
   config:
     required: true
+pages:
+- src/donation-thanks.html
