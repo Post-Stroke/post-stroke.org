@@ -5,18 +5,55 @@ fields:
 - type: text
   name: layout
   label: layout
-- type: text
-  name: title
-  label: title
-- type: textarea
-  name: excerpt
-  label: excerpt
+  hidden: true
 - type: text
   name: permalink
   label: permalink
+  hidden: true
+- type: text
+  name: title
+  label: title
+  config:
+    required: true
+- type: textarea
+  name: excerpt
+  label: excerpt
+  description: This is displayed in Google search results and when sharing the URL
+    on social media.
+  config:
+    required: true
+- name: headline
+  type: text
+  config:
+    required: true
+  label: Headline
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
+- name: share_headline
+  type: text
+  config:
+    required: true
+  label: Share Headline
 - type: textarea
   name: donation-prompt
-  label: donation-prompt
-- type: text
-  name: donation-url
-  label: donation-url
+  label: Donation Prompt
+  description: This is the message we're encouraging folks to share on social media.
+    Keep it short enough for Twitter's limit.
+  config:
+    required: true
+- name: share_body
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Share Body
