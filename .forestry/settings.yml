@@ -5,11 +5,15 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
+  path: src/resources.html
+  label: Links Page
+- type: document
   path: src/index.html
   label: Donate Page
 - type: document
-  path: src/resources.html
-  label: Links Page
+  path: src/donation-thanks.html
+  label: Donation Thanks Page
+  match: "**/*"
 upload_dir: assets/images
 public_path: assets/images
 front_matter_path: ''
