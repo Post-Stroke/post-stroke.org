@@ -1,0 +1,22 @@
+---
+label: Donation Thanks Page
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: excerpt
+  label: excerpt
+- type: text
+  name: permalink
+  label: permalink
+- type: textarea
+  name: donation-prompt
+  label: donation-prompt
+- type: text
+  name: donation-url
+  label: donation-url
