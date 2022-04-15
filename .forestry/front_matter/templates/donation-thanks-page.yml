@@ -41,13 +41,6 @@ fields:
   config:
     required: true
   label: Share Headline
-- type: textarea
-  name: donation-prompt
-  label: Donation Prompt
-  description: This is the message we're encouraging folks to share on social media.
-    Keep it short enough for Twitter's limit.
-  config:
-    required: true
 - name: share_body
   type: textarea
   default: ''
@@ -57,3 +50,15 @@ fields:
     schema:
       format: markdown
   label: Share Body
+- name: prompt_headline
+  type: text
+  config:
+    required: false
+  label: Prompt Headline
+- type: textarea
+  name: donation-prompt
+  label: Prompt
+  description: This is the message we're encouraging folks to share on social media.
+    Keep it short enough for Twitter's limit.
+  config:
+    required: true
