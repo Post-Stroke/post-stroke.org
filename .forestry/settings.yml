@@ -7,7 +7,6 @@ sections:
 - type: document
   path: src/index.html
   label: Donate Page
-  match: "**/*"
 - type: document
   path: src/resources.html
   label: Links Page
