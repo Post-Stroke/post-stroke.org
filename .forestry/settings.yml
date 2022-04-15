@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: src/resources.html
+  path: src/index.html
   label: Donate Page
   match: "**/*"
 - type: document
