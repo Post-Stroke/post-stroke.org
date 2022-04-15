@@ -33,4 +33,4 @@ fields:
   config:
     required: true
 pages:
-- src/index.html
+- src/resources.html
