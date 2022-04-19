@@ -33,7 +33,7 @@ layout: layouts/base.njk
             <a {% if page.url == "/" or 'donation' in page.url %} class="underline underline-offset-8 decoration-[3px] decoration-peach text-body" aria-current="page"{% endif %} href="/">Donate</a>
           </li>
           <li>
-            <a {% if '/links' in page.url or 'signup-success' in page.url %}class="underline underline-offset-8 decoration-[3px] decoration-peach text-body" aria-current="page"{% endif %} href="/links">Resources</a>
+            <a {% if '/links' in page.url or 'resources' in page.url or 'signup-success' in page.url %}class="underline underline-offset-8 decoration-[3px] decoration-peach text-body" aria-current="page"{% endif %} href="/links">Resources</a>
           </li>
         </ol>
       </nav>
