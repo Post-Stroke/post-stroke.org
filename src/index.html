@@ -62,12 +62,23 @@ body: |-
 <hr class="my-10 diamond-divider" />
 
 <!-- CTA Buttons -->
-<a
-  href="{{ site.paypal }}"
-  class="btn btn-primary inline-block text-base lg:text-lg"
->
-  Donate via PayPal
-  <svg class="svg-icon">
-    <use xlink:href="/assets/images/icon-sprite.svg#arrow-right"></use>
-  </svg>
-</a>
+<div class="flex flex-wrap justify-between gap-3">
+  <a
+    href="{{ site.patreon }}"
+    class="btn btn-primary flex-auto text-center text-base lg:text-lg"
+  >
+    Donate via Patreon
+    <svg class="svg-icon">
+      <use xlink:href="/assets/images/icon-sprite.svg#arrow-right"></use>
+    </svg>
+  </a>
+  <a
+    href="{{ site.paypal }}"
+    class="btn btn-primary flex-auto text-center text-base lg:text-lg"
+  >
+    Donate via PayPal
+    <svg class="svg-icon">
+      <use xlink:href="/assets/images/icon-sprite.svg#arrow-right"></use>
+    </svg>
+  </a>
+</div>
