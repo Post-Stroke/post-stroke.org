@@ -24,6 +24,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets/downloads");
   eleventyConfig.addPassthroughCopy("assets/fonts");
   eleventyConfig.addPassthroughCopy("_redirects");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 
   // SEO Plugin
   eleventyConfig.addPlugin(pluginSEO, require("./_data/seo.json"));
