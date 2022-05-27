@@ -24,3 +24,5 @@ fields:
   name: excerpt
   label: excerpt
   hidden: true
+pages:
+- src/win-journal.html
