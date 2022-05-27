@@ -1,6 +1,6 @@
 ---
 label: Win Journal Download
-hide_body: false
+hide_body: true
 fields:
 - type: text
   name: layout
@@ -9,9 +9,13 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: textarea
   name: body
   label: body
+  config:
+    required: true
 - type: text
   name: permalink
   label: permalink
