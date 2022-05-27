@@ -13,6 +13,10 @@ sections:
 - type: document
   path: src/donation-thanks.html
   label: Donation Thanks Page
+- type: document
+  path: src/win-journal.html
+  label: Win Journal Download
+  match: "**/*"
 upload_dir: assets/images
 public_path: assets/images
 front_matter_path: ''
