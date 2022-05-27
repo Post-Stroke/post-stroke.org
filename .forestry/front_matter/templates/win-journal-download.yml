@@ -8,12 +8,12 @@ fields:
   hidden: true
 - type: text
   name: title
-  label: title
+  label: Title
   config:
     required: true
 - type: textarea
   name: body
-  label: body
+  label: Body
   config:
     required: true
 - type: text
@@ -24,5 +24,11 @@ fields:
   name: excerpt
   label: excerpt
   hidden: true
+- name: button
+  type: text
+  config:
+    required: false
+  label: Button
+  description: The CTA button copy
 pages:
 - src/win-journal.html
