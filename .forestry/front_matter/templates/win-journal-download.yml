@@ -27,8 +27,7 @@ fields:
 - name: button
   type: text
   config:
-    required: false
+    required: true
   label: Button
-  description: The CTA button copy
 pages:
 - src/win-journal.html
