@@ -1,0 +1,19 @@
+---
+label: Win Journal Download
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: textarea
+  name: body
+  label: body
+- type: textarea
+  name: excerpt
+  label: excerpt
+- type: text
+  name: permalink
+  label: permalink
