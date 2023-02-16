@@ -10,20 +10,20 @@
   },
   "author": "Post Stroke",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "@11ty/eleventy-upgrade-help": "^2.0.2",
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-upgrade-help": "^2.0.5",
     "@tailwindcss/forms": "^0.5.3",
-    "alpinejs": "^3.10.5",
+    "alpinejs": "^3.11.1",
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.6.0",
     "del-cli": "^5.0.0",
-    "esbuild": "^0.17.1",
+    "esbuild": "^0.17.8",
     "html-minifier": "^4.0.0",
     "lite-youtube-embed": "^0.2.0",
     "md5": "^2.3.0",
     "postcss": "^8.4.21",
-    "prettier": "2.8.3",
-    "tailwindcss": "^3.2.4"
+    "prettier": "2.8.4",
+    "tailwindcss": "^3.2.6"
   },
   "dependencies": {
     "eleventy-plugin-seo": "^0.5.2"
