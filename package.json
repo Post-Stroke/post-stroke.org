@@ -1,31 +1,23 @@
 {
+  "name": "post-stroke",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "clean": "del _site",
-    "watch-css": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/css/styles.css -w --postcss",
-    "watch-js": "npx esbuild ./assets/js/scripts.js --outfile=./_site/js/scripts.js --bundle --target=es2018 --watch",
-    "start": "NODE_ENV=development concurrently \"node hash\"  \"ELEVENTY_ENV=development eleventy --serve\"  \"npm:watch-*\"",
-    "build-css": "npx tailwindcss -i ./assets/css/styles.css -o ./_site/css/styles.css --minify --postcss",
-    "build-js": "npx esbuild ./assets/js/scripts.js --outfile=./_site/js/scripts.js  --bundle --target=es2018 --minify",
-    "build": "NODE_ENV=production concurrently \"npm:build-*\" && node hash && ELEVENTY_ENV=production eleventy"
-  },
-  "author": "Post Stroke",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-upgrade-help": "^2.0.5",
-    "@tailwindcss/forms": "^0.5.3",
-    "alpinejs": "^3.11.1",
-    "autoprefixer": "^10.4.13",
-    "concurrently": "^7.6.0",
-    "del-cli": "^5.0.0",
-    "esbuild": "^0.17.8",
-    "html-minifier": "^4.0.0",
-    "lite-youtube-embed": "^0.2.0",
-    "md5": "^2.3.0",
-    "postcss": "^8.4.21",
-    "prettier": "2.8.4",
-    "tailwindcss": "^3.2.6"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "eleventy-plugin-seo": "^0.5.2"
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.6.3",
+    "astro-seo": "^0.8.3",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-tailwindcss": "^0.5.14"
   }
 }

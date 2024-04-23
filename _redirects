@@ -1,5 +1,0 @@
-# Redirects from what the browser requests to what we serve
-
-/donate /
-/js/script.js https://plausible.io/js/script.js 200
-/api/event https://plausible.io/api/event 200

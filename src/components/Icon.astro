@@ -1,0 +1,18 @@
+---
+const { class: className, icon } = Astro.props;
+const iconPath = "/assets/images/icon-sprite.svg#" + icon;
+---
+
+<svg class={className}>
+  <use xlink:href={iconPath}></use>
+</svg>
+
+<style>
+  svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: -0.145em;
+  }
+</style>

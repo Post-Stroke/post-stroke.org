@@ -1,0 +1,27 @@
+[
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com/poststrokeorg",
+    "icon": "youtube"
+  },
+  {
+    "name": "Instagram",
+    "url": "https://instagram.com/poststrokeorg/",
+    "icon": "instagram"
+  },
+  {
+    "name": "TikTok",
+    "url": "https://tiktok.com/@poststrokeorg",
+    "icon": "tiktok"
+  },
+  {
+    "name": "Threads",
+    "url": "https://www.threads.net/@poststrokeorg",
+    "icon": "threads"
+  },
+  {
+    "name": "Facebook",
+    "url": "https://www.facebook.com/poststrokeorg",
+    "icon": "facebook"
+  }
+]

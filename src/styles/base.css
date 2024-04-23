@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Layout */
+    --container-width: 93.75rem; /* 1500px */
+    --container-padding-x: clamp(
+      1.125rem,
+      5vw,
+      4.75rem
+    ); /* 18px | 5vw | 76px */
+
+    --container-padding-y: clamp(
+      1.75rem,
+      5vw,
+      6.25rem
+    ); /* 28px | 5vw | 100px */
+    --nav-item-height: 62px;
+
+    /* Color Palette */
+    --color-white: 0deg 0% 100%;
+
+    --color-stone-800: 40deg 8% 10%;
+    --color-stone-700: 40deg 8% 17%;
+    --color-stone-600: 40deg 10% 31%;
+    --color-stone-500: 40deg 18% 68%;
+    --color-stone-400: 40deg 27% 80%;
+    --color-stone-300: 40deg 21% 86%;
+    --color-stone-200: 40deg 18% 91%;
+    --color-stone-100: 40deg 16% 94%;
+
+    --color-peach-100: 32deg 87% 81%;
+    --color-peach-400: 32deg 89% 66%;
+    --color-peach-800: 32deg 85% 50%;
+
+    --color-plum-100: 286deg 23% 33%;
+    --color-plum-400: 286deg 24% 24%;
+    --color-plum-800: 286deg 19% 14%;
+
+    --color-moss-100: 77deg 20% 28%;
+    --color-moss-400: 77deg 32% 19%;
+    --color-moss-800: 77deg 32% 14%;
+
+    --color-marine-100: 220deg 69% 57%;
+    --color-marine-400: 220deg 74% 49%;
+    --color-marine-800: 220deg 64% 19%;
+
+    --color-amber: 43deg 100% 69%;
+    --color-amber-dark: 43deg 100% 49%;
+  }
+}
+
+/* ----------------------- */
+/*  Light Theme (Default)  */
+/* ----------------------- */
+
+:root,
+html[data-theme="light"] {
+  /* Page Backgrounds */
+  --color-page: var(--color-stone-100);
+  --color-page-offset: var(--color-stone-200);
+
+  /* Border */
+  --color-border: var(--color-stone-400);
+
+  /* Body Text */
+  --color-body: var(--color-stone-800);
+
+  /* Muted Text */
+  --color-muted: var(--color-stone-600);
+
+  /* Primary Color */
+  --color-primary: var(--color-peach-400);
+  --color-primary-dark: var(--color-peach-800);
+}
+
+/* ----------------------- */
+/*  Dark                   */
+/* ----------------------- */
+
+/* html[data-theme="dark"] {
+  --color-page: var(--color-stone-800);
+  --color-page-offset: var(--color-stone-800);
+
+  --color-border: var(--color-stone-700);
+
+  --color-body: var(--color-white);
+
+  --color-muted: var(--color-stone-300);
+
+  --color-primary: var(--color-peach-400);
+  --color-primary-dark: var(--color-peach-800);
+} */

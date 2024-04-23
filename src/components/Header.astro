@@ -1,0 +1,68 @@
+---
+import Logo from "./Logo.astro";
+import Icon from "../components/Icon.astro";
+import { SITE_TITLE } from "../config";
+import navLinks from "../data/nav-links.json";
+import socialLinks from "../data/social-links.json";
+
+const currentPath = Astro.url.pathname;
+---
+
+<header
+  class="flex flex-col border-b border-border lg:fixed lg:h-screen lg:w-64 lg:overflow-scroll lg:border-b-0 lg:border-r-2">
+  <!-- Logo -->
+  <div class="p-6">
+    <a
+      class="transition-colors duration-500 hover:text-primary focus:text-primary"
+      href="/">
+      <Logo class="max-w-40" />
+      <h1 class="sr-only">{SITE_TITLE}</h1>
+    </a>
+  </div>
+
+  <!-- Nav -->
+  <nav
+    class="font-exteded flex gap-4 divide-border border-y-2 border-border text-base lg:flex-col lg:gap-0 lg:divide-y-2">
+    {
+      navLinks.map(({ name, url, icon }) => (
+        <a
+          href={url}
+          class:list={[
+            "group flex min-h-[--nav-item-height] items-center gap-2.5 py-4 leading-none opacity-80 transition-all hover:text-body hover:opacity-100 focus:text-body focus:opacity-100 lg:px-5 lg:hover:bg-page-offset",
+            { "text-body opacity-100": currentPath === url },
+            { "text-muted opacity-80": currentPath !== url },
+          ]}>
+          <Icon
+            icon={icon}
+            class:list={[
+              "text-lg text-muted transition-colors group-hover:stroke-primary-dark group-focus:stroke-primary-dark ",
+              { "stroke-primary-dark": currentPath === url },
+              { "stroke-muted": currentPath !== url },
+            ]}
+          />
+          {name}
+        </a>
+      ))
+    }
+  </nav>
+
+  <!-- Social Links -->
+  <footer class="mt-auto">
+    <h2 class="sr-only">Social Media</h2>
+    <ul
+      class="-mt-0.5 flex min-h-[--nav-item-height] items-center justify-between border-t-2 border-border bg-page-offset text-xl lg:px-5">
+      {
+        socialLinks.map(({ name, url, icon }) => (
+          <li>
+            <a
+              class="px-1 text-muted transition-colors hover:text-primary-dark focus:text-primary-dark"
+              href={url}>
+              <span class="sr-only">{name}</span>
+              <Icon icon={icon} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </footer>
+</header>

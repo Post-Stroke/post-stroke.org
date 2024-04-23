@@ -1,0 +1,62 @@
+---
+import Logo from "./Logo.astro";
+import Icon from "../components/Icon.astro";
+import { SITE_TITLE } from "../config";
+import navLinks from "../data/nav-links.json";
+import socialLinks from "../data/social-links.json";
+
+const currentPath = Astro.url.pathname;
+---
+
+<footer class="border-t-2 border-border">
+  <div
+    class="container flex flex-wrap gap-[--container-padding-y] py-[--container-padding-y]">
+    <nav
+      class="flex flex-wrap gap-x-[--container-padding-x] gap-y-[--container-padding-y] sm:grid-cols-[repeat(2,_max-content)]">
+      <!-- Organization -->
+      <div>
+        <h1 class="font-exteded mb-6 text-lg leading-[1.10]">Organization</h1>
+        <nav class="inline-flex flex-col gap-4">
+          <a
+            class="font-mono text-base leading-none text-muted underline-offset-4 hover:text-body hover:underline focus:text-body"
+            href="/about">About Us</a
+          >
+          <a
+            class="font-mono text-base leading-none text-muted underline-offset-4 hover:text-body hover:underline focus:text-body"
+            href="/contact">Contact</a
+          >
+        </nav>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h1 class="font-exteded mb-6 text-lg leading-[1.10]">Support</h1>
+        <nav class="inline-flex flex-col gap-4">
+          <a
+            class="font-mono text-base leading-none text-muted underline-offset-4 hover:text-body hover:underline focus:text-body"
+            href="/donate">Make a Donation</a
+          >
+        </nav>
+      </div>
+    </nav>
+
+    <!-- Newsletter -->
+    <div class="max-w-sm flex-grow">
+      <h1 class="font-exteded mb-2 text-lg leading-[1.10]">
+        Weekly Recovery Newsletter
+      </h1>
+      <p class="text-base text-muted">
+        Get actionable tips sent to your inbox every Friday, so you can continue
+        your recovery journey at home.
+      </p>
+    </div>
+  </div>
+
+  <!-- Legal -->
+  <div
+    class="flex flex-wrap items-center justify-center gap-3 border-t-2 border-border bg-page-offset px-[--container-padding-x] py-4 text-center font-mono text-xs leading-tight text-muted md:justify-end md:gap-x-6 md:text-sm lg:min-h-[--nav-item-height]">
+    <a href="/disclaimer">Medical Disclaimer</a>
+    <span class="hidden h-5 w-0.5 bg-border md:block"></span>
+    <p>Post Stroke is a 501 (c)(3) Nonprofit EIN 87-4718417</p>
+  </div>
+</footer>

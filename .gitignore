@@ -1,32 +1,24 @@
-# Logs
-logs
-*.log
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Dependency directories
-package-lock.json
-node_modules/
-jspm_packages/
-
-# dotenv environment variables file
+# environment variables
 .env
+.env.production
 
-# Mac
+# macOS-specific files
 .DS_Store
 
-#dev env
-.vscode
-
-#Build
-_site
-
-#Generated hash data
-_data/hash.json
+# jetbrains setting folder
+.idea/

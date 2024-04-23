@@ -1,0 +1,77 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_OG_IMG } from "../config";
+import { SEO } from "astro-seo";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/base.css";
+---
+
+<!doctype html>
+<html lang="en" class="bg-page text-body antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <SEO
+      charset="UTF-8"
+      title={title}
+      titleTemplate="Post Stroke – %s"
+      titleDefault="Post Stroke - {SITE_DESCRIPTION}"
+      description={SITE_DESCRIPTION}
+      openGraph={{
+        basic: {
+          title: "Post Stroke - {SITE_DESCRIPTION}",
+          type: "A type.",
+          image: `${SITE_OG_IMG}`,
+        },
+        optional: {
+          description: `${SITE_DESCRIPTION}`,
+        },
+      }}
+    />
+
+    <style>
+      @font-face {
+        font-family: "GT America";
+        font-style: normal;
+        font-weight: 400;
+        src: url(/assets/fonts/GT-America-Standard-Regular.woff2)
+          format("woff2");
+      }
+      @font-face {
+        font-family: "GT America";
+        font-style: italic;
+        font-weight: 400;
+        src: url(/assets/fonts/GT-America-Standard-Regular-Italic.woff2)
+          format("woff2");
+      }
+      @font-face {
+        font-family: "GT America Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: url(/assets/fonts/GT-America-Mono-Regular.woff2) format("woff2");
+      }
+      @font-face {
+        font-family: "GT America Extended";
+        font-style: normal;
+        font-weight: 800;
+        src: url(/assets/fonts/GT-America-Extended-Black.woff2) format("woff2");
+      }
+    </style>
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <div class="flex min-h-screen flex-col lg:pl-64">
+      <slot />
+      <Footer title={SITE_TITLE} />
+    </div>
+  </body>
+</html>

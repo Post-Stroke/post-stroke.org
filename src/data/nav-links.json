@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Home",
+    "url": "/",
+    "icon": "home"
+  },
+  {
+    "name": "About",
+    "url": "/about",
+    "icon": "globe"
+  },
+  {
+    "name": "Contact",
+    "url": "/contact",
+    "icon": "envelope"
+  },
+  {
+    "name": "Donate",
+    "url": "/donate",
+    "icon": "hand"
+  }
+]
