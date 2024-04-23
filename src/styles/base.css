@@ -50,6 +50,11 @@
     --color-amber: 43deg 100% 69%;
     --color-amber-dark: 43deg 100% 49%;
   }
+
+  /* Custom Outlines */
+  *:focus {
+    @apply focus:outline-offset-4 focus:outline-primary-dark;
+  }
 }
 
 /* ----------------------- */

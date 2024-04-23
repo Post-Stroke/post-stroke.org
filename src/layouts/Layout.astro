@@ -69,7 +69,9 @@ import "../styles/base.css";
   </head>
   <body>
     <Header title={SITE_TITLE} />
-    <div class="flex min-h-screen flex-col lg:pl-64">
+    <div
+      id="maincontent"
+      class="flex min-h-dvh flex-col pt-[--nav-item-height] lg:pl-64 lg:pt-0">
       <slot />
       <Footer title={SITE_TITLE} />
     </div>
