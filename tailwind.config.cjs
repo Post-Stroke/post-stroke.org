@@ -27,6 +27,37 @@ module.exports = {
         DEFAULT: "hsl(var(--color-primary) / <alpha-value>)",
         dark: "hsl(var(--color-primary-dark) / <alpha-value>)",
       },
+
+      // Individual Colors
+
+      // White
+      white: "hsl(var(--color-white) / <alpha-value>)",
+
+      // Stone
+      stone: {
+        800: "hsl(var(--color-stone-800) / <alpha-value>)",
+      },
+
+      // Marine
+      marine: {
+        100: "hsl(var(--color-marine-100) / <alpha-value>)",
+        400: "hsl(var(--color-marine-400) / <alpha-value>)",
+        800: "hsl(var(--color-marine-800) / <alpha-value>)",
+      },
+
+      // Marine
+      moss: {
+        100: "hsl(var(--color-moss-100) / <alpha-value>)",
+        400: "hsl(var(--color-moss-400) / <alpha-value>)",
+        800: "hsl(var(--color-moss-800) / <alpha-value>)",
+      },
+
+      // Marine
+      plum: {
+        100: "hsl(var(--color-plum-100) / <alpha-value>)",
+        400: "hsl(var(--color-plum-400) / <alpha-value>)",
+        800: "hsl(var(--color-plum-800) / <alpha-value>)",
+      },
     },
 
     fontSize: {
@@ -41,7 +72,7 @@ module.exports = {
 
     // Container
     container: {
-      center: true,
+      center: false,
       padding: "var(--container-padding-x)",
       screens: {
         sm: "100%",
@@ -49,6 +80,16 @@ module.exports = {
         lg: "100%",
         xl: "106.25rem", // max 1700px
       },
+    },
+
+    letterSpacing: {
+      tighter: "-.04em",
+      tight: "-.01em",
+      normal: "0",
+      wide: ".025em",
+      wider: ".05em",
+      widest: ".1em",
+      widest: ".25em",
     },
 
     extend: {

@@ -1,0 +1,15 @@
+---
+const { class: className, title } = Astro.props;
+import Icon from "../components/Icon.astro";
+---
+
+<div
+  class={className +
+    " relative p-[--container-padding-x] flex items-center text-white font-exteded uppercase leading-[.9] tracking-tight text-[clamp(2.75rem,9vw,6.875rem)] overflow-hidden bg-grain min-h-56"}>
+  <h1><slot /></h1>
+
+  <Icon
+    icon="logomark"
+    class="fill-white absolute right-[-20vw] top-1/2 z-10 -translate-y-1/2 text-[clamp(22rem,50vw,62rem)] opacity-[3%] sm:right-[min(-150px,-6%)]"
+  />
+</div>

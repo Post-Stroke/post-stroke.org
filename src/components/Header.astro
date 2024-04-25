@@ -9,12 +9,12 @@ const currentPath = Astro.url.pathname;
 ---
 
 <a
-  class="font-exteded sr-only top-2 z-10 rounded-lg bg-page text-lg focus:not-sr-only focus:absolute focus:ml-2 focus:px-2 focus:py-1 focus:outline-offset-0"
+  class="font-exteded sr-only top-2 z-50 rounded-lg bg-page text-lg focus:not-sr-only focus:absolute focus:ml-2 focus:px-2 focus:py-1 focus:outline-offset-0"
   href="#maincontent">Skip Navigation</a
 >
 
 <header
-  class="fixed w-full lg:flex lg:h-dvh lg:w-64 lg:flex-col lg:overflow-x-scroll lg:border-b-0 lg:border-r-2 lg:border-border"
+  class="fixed z-50 w-full lg:flex lg:h-dvh lg:w-64 lg:flex-col lg:overflow-x-scroll lg:border-b-0 lg:border-r-2 lg:border-border"
   x-data="{ isOpen: false }"
   @keydown.escape="isOpen = false">
   <!-- Logo -->
@@ -37,7 +37,7 @@ const currentPath = Astro.url.pathname;
 
   <div
     id="nav-menu"
-    class="relative z-0 max-h-[calc(100dvh-var(--nav-item-height))] flex-col overflow-x-scroll overscroll-contain bg-page transition-all motion-reduce:transition-none lg:!flex lg:flex-1"
+    class="max-h-[calc(100dvh-var(--nav-item-height))] flex-col overflow-x-scroll overscroll-contain bg-page transition-all motion-reduce:transition-none lg:!flex lg:flex-1 lg:transition-none"
     @click.away="isOpen = false"
     x-show="isOpen"
     x-transition:enter-start="[clip-path:polygon(0%_0,_100%_0%,_100%_0%,_0_0%)] -translate-y-6"

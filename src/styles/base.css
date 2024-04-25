@@ -46,14 +46,17 @@
     --color-marine-100: 220deg 69% 57%;
     --color-marine-400: 220deg 74% 49%;
     --color-marine-800: 220deg 64% 19%;
-
-    --color-amber: 43deg 100% 69%;
-    --color-amber-dark: 43deg 100% 49%;
   }
 
   /* Custom Outlines */
   *:focus {
     @apply focus:outline-offset-4 focus:outline-primary-dark;
+  }
+
+  /* Custom Grain Effect */
+  .bg-grain {
+    background-image: url("assets/images/grain.png");
+    background-blend-mode: hard-light;
   }
 }
 

@@ -1,13 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
 import HeadingGroup from "../components/HeadingGroup.astro";
 ---
 
 <Layout title="Contact">
-  <main class="container flex-1 py-[--container-padding-y]">
-    <HeadingGroup
-      heading="Contact Us"
-      subheading="We Love Hearing from Folks"
-    />
+  <main class="flex-1">
+    <Hero class="bg-stone-800">
+      Let’s<br />
+      Work<br />
+      Together
+    </Hero>
+
+    <div class="container py-[--container-padding-y]">
+      <HeadingGroup
+        class="mb-7"
+        heading="Contact Us"
+        subheading="We Love Hearing From Folks"
+      />
+
+      <p class="max-w-[36.25rem] text-lg text-body">
+        Do you have a question or an idea, want to collaborate on a project, or
+        just say hi? We'd love to hear from you! That said, we're a very small
+        team, so it might take us a few days to get back to you.
+      </p>
+    </div>
   </main>
 </Layout>

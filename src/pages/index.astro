@@ -1,13 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
 import HeadingGroup from "../components/HeadingGroup.astro";
 ---
 
 <Layout title="Home">
-  <main class="container flex-1 py-[--container-padding-y]">
-    <HeadingGroup
-      heading="We Need Your Help"
-      subheading="Raising Funds to Reach More Survivors"
-    />
+  <main class="flex-1">
+    <Hero class="bg-plum-400">
+      Stroke<br />
+      Awareness<br />
+      Month
+    </Hero>
+
+    <div class="container py-[--container-padding-y]">
+      <HeadingGroup
+        heading="We Need Your Help"
+        subheading="Raising Funds to Reach More Survivors"
+      />
+    </div>
   </main>
 </Layout>
