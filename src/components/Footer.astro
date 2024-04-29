@@ -4,15 +4,15 @@ const currentPath = Astro.url.pathname;
 
 <footer class="border-t-2 border-border">
   <div
-    class="container flex flex-wrap gap-[--container-padding-y] py-[--container-padding-y]">
+    class="container grid grid-flow-row gap-x-[calc(var(--container-padding-x)*2)] gap-y-8 py-[--container-padding-y] xl:grid-cols-2">
     <nav
-      class="flex flex-wrap gap-x-[--container-padding-x] gap-y-[--container-padding-y] sm:grid-cols-[repeat(2,_max-content)]">
+      class="flex flex-wrap gap-x-[calc(var(--container-padding-x)*2)] gap-y-8">
       <!-- Organization -->
       <div>
-        <h1 class="font-exteded mb-6 text-lg leading-[1.10] tracking-tight">
+        <h1 class="mb-3 font-exteded text-lg leading-[1.10] tracking-tight">
           Organization
         </h1>
-        <nav class="inline-flex flex-col gap-4">
+        <nav class="inline-flex flex-col gap-4 tracking-tighter">
           <a
             class="font-mono text-base leading-none text-muted underline-offset-4 hover:text-body hover:underline focus:text-body"
             href="/about">About Us</a
@@ -26,10 +26,10 @@ const currentPath = Astro.url.pathname;
 
       <!-- Support -->
       <div>
-        <h1 class="font-exteded mb-6 text-lg leading-[1.10] tracking-tight">
+        <h1 class="mb-3 font-exteded text-lg leading-[1.10] tracking-tight">
           Support
         </h1>
-        <nav class="inline-flex flex-col gap-4">
+        <nav class="inline-flex flex-col gap-4 tracking-tighter">
           <a
             class="font-mono text-base leading-none text-muted underline-offset-4 hover:text-body hover:underline focus:text-body"
             href="/donate">Make a Donation</a
@@ -39,20 +39,43 @@ const currentPath = Astro.url.pathname;
     </nav>
 
     <!-- Newsletter -->
-    <div class="max-w-sm flex-grow">
-      <h1 class="font-exteded mb-2 text-lg leading-[1.10] tracking-tight">
-        Weekly Recovery Newsletter
-      </h1>
-      <p class="text-base text-muted">
-        Get actionable tips sent to your inbox every Friday, so you can continue
-        your recovery journey at home.
-      </p>
+    <div class="xl:justify-self-center">
+      <form
+        class="max-w-[25.625rem]"
+        action="https://app.convertkit.com/forms/1922972/subscriptions"
+        method="post">
+        <h1 class="mb-3 font-exteded text-lg leading-[1.10] tracking-tight">
+          Weekly Recovery Newsletter
+        </h1>
+        <p class="mb-6 text-base text-muted">
+          Get actionable tips sent to your inbox every Friday, so you can
+          continue your recovery journey at home.
+        </p>
+        <div
+          class="flex items-stretch rounded-lg border-2 border-border bg-page p-1 has-[input:focus]:border-primary-dark">
+          <input
+            class="flex-1 rounded-md !border-transparent px-1 py-1.5 placeholder:text-sm focus:outline-none focus:ring-transparent sm:px-2 sm:placeholder:text-base"
+            name="email_address"
+            aria-label="Your Email"
+            placeholder="Your Email"
+            required
+            oninvalid="setCustomValidity('Required: Please provide your email')"
+            oninput="setCustomValidity('')"
+            type="email"
+          />
+          <button
+            data-element="submit"
+            class="btn btn-primary whitespace-nowrap rounded-md p-2.5 text-xs leading-none focus:outline-offset-[5px] sm:px-3.5 sm:py-3.5 sm:text-sm sm:leading-none">
+            Send <span class="hidden sm:inline">Me</span> Tips
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 
   <!-- Legal -->
   <div
-    class="flex flex-wrap items-center justify-center gap-3 border-t-2 border-border bg-page-offset px-[--container-padding-x] py-4 text-center font-mono text-xs leading-tight text-muted md:justify-end md:gap-x-6 md:text-sm lg:min-h-[--nav-item-height]">
+    class="flex flex-wrap items-center justify-center gap-3 border-t-2 border-border bg-page-offset px-[--container-padding-x] py-4 text-center font-mono text-xs leading-tight tracking-tighter text-muted md:justify-end md:gap-x-6 md:text-sm lg:min-h-[--nav-item-height]">
     <a
       class="underline-offset-4 hover:text-body hover:underline focus:text-body"
       href="/disclaimer">Medical Disclaimer</a

@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
 import HeadingGroup from "../components/HeadingGroup.astro";
 ---
 
@@ -19,11 +20,64 @@ import HeadingGroup from "../components/HeadingGroup.astro";
         subheading="We Love Hearing From Folks"
       />
 
-      <p class="max-w-[36.25rem] text-lg text-body">
+      <p class="mb-11 max-w-[36.25rem] text-lg text-body">
         Do you have a question or an idea, want to collaborate on a project, or
         just say hi? We'd love to hear from you! That said, we're a very small
         team, so it might take us a few days to get back to you.
       </p>
+
+      <form
+        class="max-w-[40.625rem]"
+        action="https://usebasin.com/f/5c27a09fa8a9"
+        method="POST">
+        <div class="grid gap-5 sm:grid-cols-2">
+          <label class="block">
+            <span class="font-exteded text-body">Name</span>
+            <input
+              type="text"
+              name="name"
+              class="mt-1.5 block w-full"
+              placeholder="John Doe"
+            />
+          </label>
+          <label class="block">
+            <span class="font-exteded text-body">Email</span>
+            <input
+              name="email"
+              type="email"
+              class="mt-1.5 block w-full"
+              placeholder="john@example.com"
+            />
+          </label>
+
+          <input type="hidden" name="_botvortex" />
+
+          <label class="block sm:col-span-2">
+            <span class="font-exteded text-body">Message</span>
+            <textarea
+              name="message"
+              class="mt-1.5 block w-full"
+              placeholder="What’s on your mind?"
+              rows="5"></textarea>
+          </label>
+
+          <div
+            class="flex items-center gap-3 rounded-lg bg-page-offset p-4 text-sm leading-tight sm:col-span-2">
+            <Icon
+              icon="hand"
+              class="hidden shrink-0 stroke-muted text-lg text-muted"
+            />
+            <p>
+              Please don't share any private medical information. We are not
+              responsible for data shared through this form.
+            </p>
+          </div>
+
+          <button data-element="submit" class="btn btn-primary w-max">
+            Send Message
+          </button>
+        </div>
+      </form>
     </div>
   </main>
 </Layout>

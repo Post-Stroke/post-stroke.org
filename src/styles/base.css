@@ -4,7 +4,9 @@
 
 @layer base {
   :root {
-    /* Layout */
+    /* -------------- */
+    /* Layout  */
+    /* -------------- */
     --container-width: 93.75rem; /* 1500px */
     --container-padding-x: clamp(
       1.125rem,
@@ -19,7 +21,15 @@
     ); /* 28px | 5vw | 100px */
     --nav-item-height: 62px;
 
-    /* Color Palette */
+    /* -------------- */
+    /* Typography     */
+    /* -------------- */
+
+    --font-size-3xl: clamp(1.75rem, 2vw + 1.25rem, 2.5rem); /* 28 - 40 */
+
+    /* -------------- */
+    /* Color Palette  */
+    /* -------------- */
     --color-white: 0deg 0% 100%;
 
     --color-stone-800: 40deg 8% 10%;
@@ -48,15 +58,79 @@
     --color-marine-800: 220deg 64% 19%;
   }
 
+  /* -------------- */
+  /* A11y           */
+  /* -------------- */
+
   /* Custom Outlines */
   *:focus {
     @apply focus:outline-offset-4 focus:outline-primary-dark;
   }
 
+  /* -------------- */
+  /* Misc.         */
+  /* -------------- */
+
   /* Custom Grain Effect */
   .bg-grain {
     background-image: url("assets/images/grain.png");
-    background-blend-mode: hard-light;
+    background-blend-mode: color-dodge;
+  }
+
+  /* ------------------ */
+  /* Inputs             */
+  /* ------------------ */
+
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    background-color: var(--page);
+    color: var(--body);
+    @apply rounded-lg border-2 border-border bg-page px-4 py-3.5 text-body focus:border-primary-dark focus:!outline-none focus:ring-0;
+  }
+
+  textarea {
+    @apply min-h-14;
+  }
+
+  input::placeholder {
+    @apply font-mono text-base text-muted opacity-70;
+  }
+
+  /* -------------- */
+  /* Buttons        */
+  /* -------------- */
+
+  .btn {
+    @apply inline-flex items-center gap-1 rounded-lg px-6 py-5 font-exteded leading-none outline-offset-2 transition-colors duration-200;
+  }
+
+  /* triangle */
+  .btn::after {
+    content: "";
+    border-bottom: 8px solid currentColor;
+    border-left: 8px solid transparent;
+    @apply block size-0 -rotate-45 opacity-50 transition-opacity duration-200;
+  }
+
+  .btn:hover::after {
+    @apply opacity-100;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-body hover:bg-primary-dark focus:bg-primary-dark;
   }
 }
 

@@ -82,6 +82,7 @@ module.exports = {
       },
     },
 
+    // Tracking
     letterSpacing: {
       tighter: "-.04em",
       tight: "-.01em",
@@ -90,6 +91,17 @@ module.exports = {
       wider: ".05em",
       widest: ".1em",
       widest: ".25em",
+    },
+
+    // Border Radius
+    borderRadius: {
+      none: "0",
+      sm: "0.25rem",
+      DEFAULT: "0.25rem",
+      md: "0.625rem",
+      lg: "1rem",
+      full: "9999px",
+      xl: "1.875rem",
     },
 
     extend: {
@@ -106,5 +118,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
