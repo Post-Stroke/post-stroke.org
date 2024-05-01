@@ -3,16 +3,109 @@ import Layout from "../layouts/Layout.astro";
 import HeadingGroup from "../components/HeadingGroup.astro";
 ---
 
-<Layout title="Medical Disclaimer">
-  <main class="container flex-1 py-[--container-padding-y]">
-    <HeadingGroup class="mb-6" heading="Medical Disclaimer" body="" />
+<Layout title="Disclaimer">
+  <main class="relative flex-1 overflow-hidden">
+    <div class="container relative z-10 py-[--container-padding-y]">
+      <HeadingGroup heading="Disclaimer" />
 
-    <p class="max-w-[36.25rem] text-base text-body">
-      All content on this website and across our social media is for general
-      informational purposes only. It is not intended to serve as a substitute
-      for medical advice or treatment from a physician or qualified healthcare
-      provider. Talk to your doctor before starting a new exercise or therapy
-      regimen.
-    </p>
+      <div class="max-w-[40.625rem] text-lg *:mb-[1.3em]">
+        <div class="my-7 border-l-2 border-border pl-7 md:my-10">
+          <h2 class="mb-3 font-exteded text-xl">TL;DR</h2>
+          <p class="mb-3">
+            Information and education provided by Post Stroke is meant to be
+            used for general information purposes only. It doesn’t serve as a
+            replacement for professional medical or therapy advice and it’s not
+            meant to be used for a diagnosis. Any information provided by or
+            communication from a healthcare expert through Post Stroke does not
+            constitute a therapist-patient relationship.
+          </p>
+          <p>
+            Post Stroke isn’t responsible if you sustain a physical, mental, or
+            emotional injury as result of any of the information, exercises,
+            workouts, or activities provided on our website or through our
+            social media accounts.
+          </p>
+        </div>
+
+        <h2 class="font-exteded text-xl">The Details</h2>
+
+        <ul class="ml-4 list-disc *:mb-[1.3em] marker:text-primary-dark">
+          <li>
+            Post Stroke is not a replacement for professional medical or therapy
+            advice and our education provided is for informational purposes
+            only.
+          </li>
+          <li>
+            The information, advice, and products provided or made available
+            through Post Stroke’s site or its content on social media are not
+            intended nor is it implied to be a substitute for professional
+            medical or clinician advice nor does it constitute a
+            therapist-patient relationship.
+          </li>
+          <li>
+            You should not use the information on this website or on our social
+            media accounts for diagnosing or treating a medical or health
+            condition.
+          </li>
+          <li>
+            You should consult a therapist or a physician in all matters
+            relating to your health, and particularly in respect to any symptoms
+            that may require diagnosis or medical attention.
+          </li>
+          <li>
+            Any action on your part in response to the information provided on
+            this website is at the user’s discretion.
+          </li>
+          <li>
+            Always seek the advice of your therapist or physician or other
+            qualified healthcare providers before acting on any of the
+            information provided by Post Stroke.
+          </li>
+          <li>
+            Post Stroke makes no representations or warranties with respect to
+            any information offered or provided on or through our website or
+            social media accounts regarding exercises, workouts, activities, or
+            any other aspect of education provided.
+          </li>
+          <li>
+            Post Stroke is not liable for any direct or indirect claim, loss or
+            damage resulting from the use of this website, any web site(s)
+            linked to/from it, and/or any of Post Stroke’s education on social
+            media platforms.
+          </li>
+          <li>
+            The owners of this website will use reasonable efforts to include
+            up-to-date and accurate information in this website and on Post
+            Stroke’s social media accounts, but makes no representations,
+            warranties, or assurances as to the accuracy, currency, or
+            completeness of the information provided.
+          </li>
+          <li>
+            The owners of this website shall not be liable for any damages or
+            injury resulting from your access to, or inability to access this
+            website and Post Stroke’s content on social media platforms, or from
+            your reliance on any information provided at this website or Post
+            Stroke’s content on social media.
+          </li>
+
+          <li>
+            Post Stroke may provide links or references to other sites from this
+            website or Post Stroke’s social media accounts but the owners of
+            this website and Post Stroke’s social media accounts have no
+            responsibility for the content of such other sites and shall not be
+            liable for any damages or injury arising from that content. Any
+            links to other sites are provided as merely a convenience to the
+            users of this website or our content on social media platforms.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Circles -->
+    <div
+      class="absolute -bottom-[500px] -left-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+    </div>
+    <div
+      class="absolute -bottom-[400px] -left-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+    </div>
   </main>
 </Layout>

@@ -1,0 +1,103 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HeadingGroup from "../../components/HeadingGroup.astro";
+---
+
+<Layout title="The Stroke Recovery Pocket Guide">
+  <main class="relative flex-1 overflow-hidden">
+    <div
+      class="container relative z-10 flex flex-col items-center gap-4 py-[--container-padding-y] md:gap-7">
+      <HeadingGroup
+        class="items-center text-center"
+        heading="The Stroke Recovery Pocket Guide"
+      />
+
+      <div
+        class="bg-grain relative mx-auto mb-7 h-48 w-full max-w-[62.5rem] overflow-hidden rounded-lg bg-moss-100 sm:aspect-video sm:h-auto md:mb-14 md:rounded-xl">
+        <img
+          class="absolute inset-0 z-10 h-full w-full object-contain p-5 shadow-xl sm:p-8"
+          src="/assets/images/stroke-recovery-pocket-guide.jpg"
+          srcset="/assets/images/stroke-recovery-pocket-guide.jpg,
+                    /assets/images/stroke-recovery-pocket-guide@2x.jpg 2x"
+          alt="Stroke Recovery Momentum by Stephanie Hopwood eBook Cover"
+          width="374"
+          height="490"
+          loading="lazy"
+        />
+
+        <img
+          class="absolute left-0 top-0 z-0 h-full w-full object-cover opacity-40"
+          src="/assets/images/wave-texture.svg"
+          role="presentation"
+          alt="Wave Texture"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="max-w-[40.625rem] text-lg *:mb-[1.3em]">
+        <p>
+          To make this eBook as accessible as possible, I made a few versions of
+          it to work with different devices.
+        </p>
+
+        <hr class="block border-border" />
+
+        <!-- EPUB -->
+        <h2 class="!mb-3 font-exteded text-xl">Smartphones & Tablets</h2>
+        <p>
+          Download this EPUB version if you want to read on your iPhone, iPad,
+          or Android device. It supports resizable text for the best reading
+          experience.
+        </p>
+        <a
+          class="btn btn-primary"
+          download="EPUB - The Stroke Recovery Pocket Guide - Post Stroke.epub"
+          href="/assets/downloads/The-Stroke-Recovery-Pocket-Guide.epub"
+          >Download EPUB Book</a
+        >
+
+        <hr class="block border-border" />
+
+        <!-- MOBI -->
+        <h2 class="!mb-3 font-exteded text-xl">Amazon Kindle Devices</h2>
+        <p>
+          Download this MOBI version if you want to read on your Amazon Kindle
+          or Kindle Fire. It supports resizable text for the best reading
+          experience. <a
+            class="text-marine-400 underline underline-offset-4 hover:text-marine-800"
+            href="https://www.amazon.com/gp/sendtokindle/email"
+            target="_blank">How to send book to your Kindle</a
+          >
+        </p>
+        <a
+          class="btn btn-primary"
+          download="MOBI - The Stroke Recovery Pocket Guide - Post Stroke.mobi"
+          href="/assets/downloads/The-Stroke-Recovery-Pocket-Guide.mobi"
+          >Download MOBI Book</a
+        >
+
+        <hr class="block border-border" />
+
+        <!-- EPUB -->
+        <h2 class="!mb-3 font-exteded text-xl">Printable PDF</h2>
+        <p>
+          Download this PDF version if you prefer to read on a computer or print
+          it. You cannot resize the text of a PDF.
+        </p>
+        <a
+          class="btn btn-primary"
+          download="PDF - The Stroke Recovery Pocket Guide - Post Stroke.pdf"
+          href="/assets/downloads/The-Stroke-Recovery-Pocket-Guide.pdf"
+          >Download PDF Book</a
+        >
+      </div>
+    </div>
+    <!-- Circles -->
+    <div
+      class="absolute -bottom-[500px] -left-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+    </div>
+    <div
+      class="absolute -bottom-[400px] -left-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+    </div>
+  </main>
+</Layout>

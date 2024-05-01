@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Icon from "../components/Icon.astro";
+import HeadingGroup from "../components/HeadingGroup.astro";
+---
+
+<Layout title="Thanks for Reaching Out">
+  <main class="flex-1">
+    <Hero class="bg-stone-800">
+      Let’s<br />
+      Work<br />
+      Together
+    </Hero>
+
+    <div class="container py-[--container-padding-y]">
+      <HeadingGroup class="mb-7" heading="Thanks for Reaching Out!" />
+
+      <p class="mb-11 max-w-[36.25rem] text-lg text-body">
+        We're looking forward to talking soon! That said, we're a very small
+        team, so it might take us a few days to get back to you.
+      </p>
+
+      <a class="btn btn-primary" href="/">Return Home</a>
+    </div>
+  </main>
+</Layout>
