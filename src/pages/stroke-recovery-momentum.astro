@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeadingGroup from "../components/HeadingGroup.astro";
+---
+
+<Layout title="Stroke Recovery Momentum">
+  <main class="relative flex-1 overflow-hidden">
+    <div
+      class="container relative z-10 flex flex-col items-center gap-4 py-[--container-padding-y] md:gap-7">
+      <HeadingGroup
+        class="items-center text-center"
+        heading="Stroke Recovery Momentum"
+      />
+
+      <div
+        class="bg-grain relative mx-auto mb-7 h-48 w-full max-w-[62.5rem] overflow-hidden rounded-lg bg-plum-400 sm:aspect-video sm:h-auto md:mb-14 md:rounded-xl">
+        <img
+          class="absolute inset-0 z-10 h-full w-full object-contain p-5 shadow-xl sm:p-8"
+          src="/assets/images/stroke-recovery-momentum-ebook.png"
+          srcset="/assets/images/stroke-recovery-momentum-ebook.png,
+                    /assets/images/stroke-recovery-momentum-ebook@2x.png 2x"
+          alt="Stroke Recovery Momentum by Stephanie Hopwood eBook Cover"
+          width="374"
+          height="490"
+          loading="lazy"
+        />
+
+        <img
+          class="absolute left-0 top-0 z-0 h-full w-full object-cover opacity-40"
+          src="/assets/images/wave-texture.svg"
+          role="presentation"
+          alt="Wave Texture"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="max-w-[40.625rem] text-lg *:mb-[1.3em]">
+        <p>
+          Physical Therapist, Certified Stroke Rehab Specialist, and stroke
+          survivor Stephanie Hopwood is generously donating a copy of her new
+          eBook to anyone who <a
+            class="text-marine-400 underline underline-offset-4 hover:text-marine-800"
+            href="/donate">makes a donation</a
+          > to Post Stroke during May.
+        </p>
+
+        <hr class="block border-border" />
+
+        <a
+          class="btn btn-primary justify-between lg:max-w-max"
+          href="/assets/downloads/stroke-recovery-momentum.pdf"
+          download="Stroke Recovery Momentum by Stephanie Hopwood"
+          >Download eBook (PDF)</a
+        >
+      </div>
+    </div>
+    <!-- Circles -->
+    <div
+      class="absolute -bottom-[500px] -left-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+    </div>
+    <div
+      class="absolute -bottom-[400px] -left-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+    </div>
+  </main>
+</Layout>
