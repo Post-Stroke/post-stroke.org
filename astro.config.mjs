@@ -13,4 +13,6 @@ export default defineConfig({
   redirects: {
     "/links": "/",
   },
+
+  trailingSlash: "never",
 });

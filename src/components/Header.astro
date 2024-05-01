@@ -28,7 +28,7 @@ const currentPath = Astro.url.pathname;
     </a>
     <button
       x-on:click="isOpen = ! isOpen"
-      class="self-stretch px-4 font-exteded text-base leading-none transition-all hover:opacity-100 focus:-outline-offset-8 focus-visible:text-body focus-visible:opacity-100 lg:hidden [@media(any-hover:hover)]:hover:bg-page-offset [@media(any-hover:hover)]:hover:text-body"
+      class="self-stretch px-4 font-exteded text-base leading-none transition-colors focus:-outline-offset-8 focus-visible:text-body lg:hidden [@media(any-hover:hover)]:hover:bg-page-offset [@media(any-hover:hover)]:hover:text-body"
       :class="isOpen ? 'text-base bg-page-offset' : ' text-muted'"
       :aria-expanded="isOpen"
       aria-controls="nav-menu">Menu</button
@@ -37,7 +37,7 @@ const currentPath = Astro.url.pathname;
 
   <div
     id="nav-menu"
-    class="max-h-[calc(100dvh-var(--nav-item-height))] flex-col overflow-x-scroll overscroll-contain bg-page transition-all duration-200 ease-in-out motion-reduce:transition-none lg:!flex lg:flex-1 lg:transition-none"
+    class="max-h-[calc(100dvh-var(--nav-item-height))] flex-col overflow-x-scroll overscroll-contain bg-page transition-[transform,clip-path] duration-300 ease-in-out motion-reduce:transition-none lg:!flex lg:flex-1 lg:transition-none"
     @click.away="isOpen = false"
     x-show="isOpen"
     x-transition:enter-start="[clip-path:polygon(0%_0,_100%_0%,_100%_0%,_0_0%)] -translate-y-6"
@@ -52,16 +52,14 @@ const currentPath = Astro.url.pathname;
           <a
             href={url}
             class:list={[
-              "group flex min-h-[--nav-item-height] items-center gap-2.5 px-5 py-4 leading-none opacity-85 transition-colors hover:bg-page-offset hover:text-body hover:opacity-100 focus:text-body focus:opacity-100 focus:-outline-offset-8",
-              { "text-body opacity-100": currentPath === url },
-              { "text-muted opacity-80": currentPath !== url },
+              "group flex min-h-[--nav-item-height] items-center gap-2.5 px-5 py-4 leading-none text-muted/80 transition-colors hover:bg-page-offset hover:text-body focus:text-body focus:-outline-offset-8",
+              { "active !text-body": currentPath === url },
             ]}>
             <Icon
               icon={icon}
               class:list={[
-                "text-[1.375rem] text-muted transition-colors group-hover:stroke-primary-dark group-focus:stroke-primary-dark ",
+                "stroke-muted/80 text-[1.375rem] transition-colors group-hover:stroke-primary-dark group-focus:stroke-primary-dark",
                 { "stroke-primary-dark": currentPath === url },
-                { "stroke-muted": currentPath !== url },
               ]}
             />
             {name}
