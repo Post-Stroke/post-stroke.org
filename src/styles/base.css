@@ -81,7 +81,7 @@
 
   /* Custom Grain Effect */
   .bg-grain {
-    background-image: url("assets/images/grain.png");
+    background-image: url("/assets/images/grain.png");
     background-blend-mode: color-dodge;
   }
 
