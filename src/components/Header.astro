@@ -52,13 +52,13 @@ const currentPath = Astro.url.pathname;
           <a
             href={url}
             class:list={[
-              "group flex min-h-[--nav-item-height] items-center gap-2.5 px-5 py-4 leading-none text-muted/80 transition-colors hover:bg-page-offset hover:text-body focus:text-body focus:-outline-offset-8",
+              "group flex min-h-[--nav-item-height] items-center gap-2.5 px-5 py-4 leading-none text-muted/85 transition-colors hover:bg-page-offset hover:text-body focus:text-body focus:-outline-offset-8",
               { "active !text-body": currentPath === url },
             ]}>
             <Icon
               icon={icon}
               class:list={[
-                "stroke-muted/80 text-[1.375rem] transition-colors group-hover:stroke-primary-dark group-focus:stroke-primary-dark",
+                "stroke-muted/85 text-[1.375rem] transition-colors group-hover:stroke-primary-dark group-focus:stroke-primary-dark",
                 { "stroke-primary-dark": currentPath === url },
               ]}
             />
