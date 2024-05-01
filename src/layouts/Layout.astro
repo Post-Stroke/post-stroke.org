@@ -15,7 +15,7 @@ import "../styles/base.css";
 <html lang="en" class="bg-page text-body antialiased">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={SITE_DESCRIPTION} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -30,12 +30,12 @@ import "../styles/base.css";
       charset="UTF-8"
       title={title}
       titleTemplate="Post Stroke – %s"
-      titleDefault="Post Stroke - {SITE_DESCRIPTION}"
+      titleDefault="Post Stroke - `${SITE_DESCRIPTION}`"
       description={SITE_DESCRIPTION}
       openGraph={{
         basic: {
-          title: "Post Stroke - {SITE_DESCRIPTION}",
-          type: "A type.",
+          title: `${SITE_DESCRIPTION}` + " - Post Stroke",
+          type: "website",
           image: `${SITE_OG_IMG}`,
         },
         optional: {
