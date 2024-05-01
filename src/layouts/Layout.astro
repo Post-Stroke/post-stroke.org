@@ -19,6 +19,8 @@ import "../styles/base.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <script src="node_modules/lite-youtube-embed/src/lite-yt-embed.js" defer
+    ></script>
 
     <SEO
       charset="UTF-8"
@@ -71,7 +73,7 @@ import "../styles/base.css";
     <Header title={SITE_TITLE} />
     <div
       id="maincontent"
-      class="flex min-h-dvh flex-col pt-[--nav-item-height] lg:pl-64 lg:pt-0">
+      class="flex min-h-dvh flex-col pt-[--nav-item-height] lg:pl-[--nav-max-width] lg:pt-0">
       <slot />
       <Footer title={SITE_TITLE} />
     </div>

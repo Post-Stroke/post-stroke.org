@@ -2,7 +2,7 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<footer class="border-t-2 border-border">
+<footer class="-mt-0.5 border-t-2 border-border">
   <div
     class="container grid grid-flow-row gap-x-[calc(var(--container-padding-x)*2)] gap-y-8 py-[--container-padding-y] xl:grid-cols-2">
     <nav
@@ -52,7 +52,7 @@ const currentPath = Astro.url.pathname;
           continue your recovery journey at home.
         </p>
         <div
-          class="flex items-stretch rounded-lg border-2 border-border bg-page p-1 has-[input:focus]:border-primary-dark">
+          class="flex items-stretch rounded-lg border-2 border-border bg-page bg-page-light p-1 has-[input:focus]:border-primary-dark">
           <input
             class="flex-1 rounded-md !border-transparent px-1 py-1.5 placeholder:text-sm focus:outline-none focus:ring-transparent sm:px-2 sm:placeholder:text-base"
             name="email_address"
@@ -75,12 +75,14 @@ const currentPath = Astro.url.pathname;
 
   <!-- Legal -->
   <div
-    class="flex flex-wrap items-center justify-center gap-3 border-t-2 border-border bg-page-offset px-[--container-padding-x] py-4 text-center font-mono text-xs leading-tight tracking-tighter text-muted md:justify-end md:gap-x-6 md:text-sm lg:min-h-[--nav-item-height]">
+    class="flex flex-wrap items-center justify-center gap-3 border-t-2 border-border bg-page-offset px-[--container-padding-x] py-4 text-center font-mono text-xs leading-snug tracking-tighter text-muted md:justify-end md:gap-x-6 md:text-sm lg:min-h-[--nav-item-height]">
     <a
       class="underline-offset-4 hover:text-body hover:underline focus:text-body"
       href="/disclaimer">Medical Disclaimer</a
     >
     <span class="hidden h-5 w-0.5 bg-border md:block"></span>
-    <p>Post Stroke is a 501 (c)(3) Nonprofit EIN 87-4718417</p>
+    <p class="text-balance">
+      Post Stroke is a 501 (c)(3) Nonprofit EIN 87-4718417
+    </p>
   </div>
 </footer>

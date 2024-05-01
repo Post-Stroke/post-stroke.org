@@ -9,6 +9,7 @@ module.exports = {
 
       // View / Component Backgrounds
       page: {
+        light: "hsl(var(--color-page-light) / <alpha-value>)",
         DEFAULT: "hsl(var(--color-page) / <alpha-value>)",
         offset: "hsl(var(--color-page-offset) / <alpha-value>)",
       },
@@ -60,25 +61,33 @@ module.exports = {
       },
     },
 
+    screens: {
+      xs: "460px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
+
     fontSize: {
       xs: [".75rem", "1em"], // 12px
-      sm: ["0.875rem", "1.25em"], // 14px
-      base: ["1rem", "1.5em"], // 16px
-      lg: ["1.125rem", "1.5em"], // 18px
-      xl: ["1.5rem", "1.375em"], // 24px
-      "2xl": ["2rem", "1.25em"], // 32px
-      "3xl": ["2.5rem", "1.05em"], // 40px
+      sm: ["var(--font-size-sm)", "1.25em"],
+      base: ["var(--font-size-base)", "1.5em"],
+      lg: ["var(--font-size-lg)", "1.5em"],
+      xl: ["var(--font-size-xl)", "1.375em"],
+      "2xl": ["var(--font-size-2xl)", "1.25em"],
+      "3xl": ["var(--font-size-3xl)", "1.05em"],
     },
 
     // Container
     container: {
-      center: false,
+      center: true,
       padding: "var(--container-padding-x)",
       screens: {
         sm: "100%",
         md: "100%",
         lg: "100%",
-        xl: "106.25rem", // max 1700px
+        xl: "103.125rem",
       },
     },
 

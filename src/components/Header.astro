@@ -14,7 +14,7 @@ const currentPath = Astro.url.pathname;
 >
 
 <header
-  class="fixed z-40 w-full lg:flex lg:h-dvh lg:w-64 lg:flex-col lg:overflow-x-scroll lg:border-b-0 lg:border-r-2 lg:border-border"
+  class="fixed z-40 w-full lg:flex lg:h-dvh lg:w-[--nav-max-width] lg:flex-col lg:overflow-x-scroll lg:border-b-0 lg:border-r-2 lg:border-border"
   x-data="{ isOpen: false }"
   @keydown.escape="isOpen = false">
   <!-- Logo -->
@@ -28,7 +28,7 @@ const currentPath = Astro.url.pathname;
     </a>
     <button
       x-on:click="isOpen = ! isOpen"
-      class="self-stretch px-4 font-exteded text-base leading-none transition-all hover:opacity-100 focus:-outline-offset-8 focus-visible:text-body focus-visible:opacity-100 lg:hidden [@media(any-hover:hover)]:bg-page-offset [@media(any-hover:hover)]:text-body"
+      class="self-stretch px-4 font-exteded text-base leading-none transition-all hover:opacity-100 focus:-outline-offset-8 focus-visible:text-body focus-visible:opacity-100 lg:hidden [@media(any-hover:hover)]:hover:bg-page-offset [@media(any-hover:hover)]:hover:text-body"
       :class="isOpen ? 'text-base bg-page-offset' : ' text-muted'"
       :aria-expanded="isOpen"
       aria-controls="nav-menu">Menu</button
@@ -74,7 +74,7 @@ const currentPath = Astro.url.pathname;
     <footer class="mt-auto">
       <h2 class="sr-only">Social Media</h2>
       <ul
-        class="-mt-0.5 flex min-h-[--nav-item-height] items-center gap-2.5 border-y-2 border-border bg-page-offset px-5 text-xl">
+        class="-mt-0.5 flex min-h-[--nav-item-height] items-center gap-2.5 border-y-2 border-border bg-page-offset px-5 text-[1.5rem] lg:justify-between">
         <li class="order-last hidden sm:block lg:hidden">
           <h3
             class="font-mono text-base leading-tight tracking-tighter text-muted">

@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeadingGroup from "../components/HeadingGroup.astro";
+---
+
+<Layout title="Page Not Found">
+  <main class="relative flex-1 overflow-hidden">
+    <div
+      class="container relative z-10 flex flex-col items-center gap-4 py-[--container-padding-y] md:gap-7">
+      <HeadingGroup
+        class="items-center text-center"
+        heading="Page Not Found…"
+      />
+
+      <img
+        class="w-full max-w-[37.5rem] rounded-lg md:rounded-xl"
+        src="/assets/images/404.jpg"
+        srcset="/assets/images/404.jpg,
+                    /assets/images/404@2x.jpg 2x"
+        alt="Elyse Newland shrugging with a confused look on her face"
+        width="450"
+        height="600"
+        loading="lazy"
+      />
+
+      <p class="max-w-[40.625rem] text-balance text-center text-lg">
+        Sorry, the page you’re looking for is missing or does not exist. Please
+        <a
+          class="text-marine-400 underline underline-offset-4 hover:text-marine-800"
+          href="/contact">let us know</a
+        > if there is a broken link or if something isn’t working right.
+      </p>
+
+      <a class="btn btn-primary" href="/">Return Home</a>
+    </div>
+    <!-- Circles -->
+    <div
+      class="absolute -bottom-[500px] -left-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+    </div>
+    <div
+      class="absolute -bottom-[400px] -left-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+    </div>
+  </main>
+</Layout>

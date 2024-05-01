@@ -1,0 +1,57 @@
+---
+const { class: className } = Astro.props;
+import {
+  donate_url,
+  fundraiser_goal_amount,
+  fundraiser_raised_amount,
+  fundraiser_raised_percent,
+} from "../config";
+---
+
+<div
+  class={className +
+    " rounded-xl bg-page-light sm:max-w-[28.125rem] flex flex-col gap-5 p-4 md:p-5"}>
+  <img
+    class="h-auto w-full rounded-lg"
+    src="/assets/images/donation-widget-hero.jpg"
+    srcset="
+          /assets/images/donation-widget-hero.jpg,
+          /assets/images/donation-widget-hero@2x.jpg 2x
+        "
+    alt="Elyse Newland smiling while reaching for her left foot on a therapy bench"
+    width="410"
+    height="225"
+    loading="lazy"
+  />
+
+  <h2 class="font-exteded text-xl leading-[1.10] tracking-tight">
+    Stroke Awareness Month Fundraiser
+  </h2>
+
+  <div>
+    <div class="mb-2 h-2 w-full rounded-full bg-moss-100/20">
+      <div
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        class="h-full rounded-full bg-moss-100"
+        aria-valuenow={fundraiser_raised_percent}
+        style="width: 10%;">
+      </div>
+    </div>
+    <p class="text-base leading-tight">
+      <strong class="font-exteded">${fundraiser_raised_amount}</strong> raised of
+      ${fundraiser_goal_amount} goal
+    </p>
+  </div>
+
+  <p class="text-base">
+    Too many stroke survivors go without the quality therapy and education they
+    need for an optimal recovery. With your support we can continue to offer
+    stroke survivors worldwide a fighting chance at recovery!
+  </p>
+
+  <a class="btn btn-primary justify-center" href={donate_url}
+    >Donate via PayPal</a
+  >
+</div>

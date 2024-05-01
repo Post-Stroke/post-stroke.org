@@ -1,0 +1,42 @@
+---
+import {
+  donate_url,
+  fundraiser_goal_amount,
+  fundraiser_raised_amount,
+  fundraiser_raised_percent,
+} from "../config";
+---
+
+<div class="sticky bottom-0 z-20 border-y-2 border-border bg-page-offset">
+  <div
+    class="mx-auto flex max-w-[87.5rem] flex-row items-center justify-between
+gap-3 sm:flex-row md:gap-5">
+    <div class="flex-1 pl-3.5 md:pl-6">
+      <div class="mb-2 h-2 w-full rounded-full bg-moss-100/20">
+        <div
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          class="h-full rounded-full bg-moss-100"
+          aria-valuenow={fundraiser_raised_percent}
+          style="width: 10%">
+        </div>
+      </div>
+
+      <p
+        class="flex flex-wrap justify-between gap-x-2 text-sm leading-tight sm:justify-normal">
+        <strong class="font-exteded">${fundraiser_raised_amount}</strong> raised
+        of ${fundraiser_goal_amount} goal
+      </p>
+    </div>
+
+    <div class="border-l-2 border-border p-3.5
+md:p-6">
+      <a
+        class="btn btn-primary justify-between p-3.5 text-sm leading-none"
+        href={donate_url}
+        >Donate <span class="hidden sm:inline">via Paypal</span></a
+      >
+    </div>
+  </div>
+</div>

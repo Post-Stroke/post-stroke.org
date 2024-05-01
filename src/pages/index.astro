@@ -2,84 +2,239 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import HeadingGroup from "../components/HeadingGroup.astro";
+import DonationEmbed from "../components/DonationEmbed.astro";
+import MiniDonationBar from "../components/MiniDonationBar.astro";
+import { donate_url, patrion_url } from "../config";
 ---
 
 <Layout title="Home">
   <main class="flex-1">
     <Hero class="bg-plum-400">
-      Stroke<br />
+      <span
+        class="float-left -ml-2 rotate-180 text-center text-[96%] leading-[1.10] tracking-[-0.06em] text-primary-dark [writing-mode:vertical-lr] md:-ml-4"
+        >2024</span
+      > Stroke<br />
       Awareness<br />
       Month
     </Hero>
 
-    <div class="container py-[--container-padding-y]">
+    <!-- Intro Section -->
+    <section
+      class="container grid gap-x-[--container-padding-x] overflow-hidden text-pretty py-[--container-padding-y] text-lg *:mb-[1.3em] xl:grid-cols-[min(50%,37.5rem),1fr] xl:grid-rows-[repeat(8,auto)]">
       <HeadingGroup
         class="mb-7"
         heading="We Need Your Help"
         subheading="Raising Funds to Reach More Survivors"
       />
 
-      <div class="max-w-[36rem] text-lg text-body *:mb-[1.3em]">
-        <p>
-          We're on a mission to create the highest-quality, evidence-based
-          stroke recovery education using language that survivors will
-          understand. When we started Post Stroke, we weren't sure if our
-          approach of sharing our recovery education on social platforms would
-          work.
-        </p>
-
-        <p>
-          Over the last three years we've heard from survivors all over the
-          world that our educational content is helping them make progress at
-          home, bridging the gap in the lack of accessible healthcare and
-          easy-to-understand recovery education.
-        </p>
-
-        <p>
-          Our approach is working. Now we need to make our mission sustainable
-          for years to come. To do this, we need to raise more funds.
-          Specifically, we need funding to help pay for our growing costs of
-          producing high-quality stroke recovery education and to compensate the
-          experts who work tirelessly to make it happen.
-        </p>
-
-        <p>
-          This very important month, we're asking the community to help us raise
-          additional funds for Post Stroke to ensure everything we do will
-          remain free and frictionless for the growing community of stroke
-          survivors, who are already overwhelmed.
-        </p>
-
-        <p>
-          Will you help fund free quality stroke recovery education for all?
-        </p>
+      <div class="relative justify-self-center xl:col-start-2 xl:row-span-full">
+        <DonationEmbed class="relative z-10 my-5 h-max" />
+        <div
+          class="absolute -right-[15%] top-[58%] z-0 aspect-square h-auto w-2/3 max-w-[16.875rem] rounded-full border-2 border-border max-sm:hidden xl:top-[55%]">
+        </div>
       </div>
 
+      <HeadingGroup class="mb-7 xl:hidden" heading="Make a Difference" />
+
       <p>
-        <svg
-          role="img"
-          title="Elyse Newland's Signature"
-          class="w-48 stroke-primary-dark md:w-52"
-          width="237"
-          height="59"
-          viewBox="0 0 237 59"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          loading="lazy"
-          ><path
-            d="M18.9717 11.9963C21.2348 4.50485 16.2697 1.15793 10.4436 1.73985C4.56125 2.32738 3.0367 7.39365 4.29768 10.8201C5.55865 14.2465 8.24969 17.2176 14.0164 15.0082C-3.64893 21.7763 2.78564 37.3124 4.86406 40.7326C9.20318 47.873 16.8773 47.3733 21.498 42.5208M21.498 42.5208C19.7735 40.435 18.7688 37.6023 18.9718 34.7156C19.3573 29.2355 22.219 24.0123 23.3962 24.0123C24.7307 24.0123 26.5619 26.6461 25.1162 35.1478C24.6095 38.1277 23.2811 40.6483 21.498 42.5208ZM21.498 42.5208C23.0474 44.3948 25.1779 45.666 27.5356 45.8318C30.831 46.0636 33.0445 44.0288 34.4633 41.8244M34.4633 41.8244C35.1894 40.6961 35.7074 39.5235 36.0557 38.5875C37.0846 35.8228 36.3802 31.601 35.5499 31.5426C34.909 31.4976 32.4908 37.3809 34.4633 41.8244ZM34.4633 41.8244C35.046 43.1372 36.012 44.3243 37.5203 45.1958C44.1413 49.021 47.4641 39.7421 45.9152 33.2915C46.7488 36.4327 48.2902 42.2082 49.3558 46.1105M49.3558 46.1105C49.7517 47.5603 50.0819 48.7516 50.2857 49.4531C51.2262 52.6901 51.823 56.0698 49.0725 57.2115C46.322 58.3531 44.1372 56.1968 45.3439 53.2777C45.9241 51.8741 47.6499 49.1221 49.3558 46.1105ZM49.3558 46.1105C51.1976 42.8587 53.0161 39.3044 53.344 36.818C53.6974 34.1375 52.9808 30.117 52.9808 30.117C56.3681 36.2947 58.0918 41.2411 58.4456 43.6921M58.4456 43.6921C58.5318 44.2893 58.5367 44.7384 58.4645 45.021C58.0039 46.8244 52.7366 45.7863 52.8183 44.6239C52.9001 43.4614 54.3407 44.0634 56.3641 44.0388C56.8384 44.0331 57.5681 43.9108 58.4456 43.6921ZM58.4456 43.6921C59.808 43.3526 61.5268 42.7809 63.2001 42.0523M63.2001 42.0523C65.0467 41.2483 66.838 40.2532 68.0337 39.1686C71.0108 36.4681 71.4901 32.7363 68.5009 32.526C65.6529 32.3257 62.315 38.0436 63.2001 42.0523ZM63.2001 42.0523C63.5537 43.6535 64.581 44.982 66.5826 45.5517C72.2679 47.17 75.596 45.2087 75.596 45.2087M81.9119 13.4822C81.9119 13.4822 82.8726 17.0824 86.5825 16.6398C91.2531 16.0826 93.495 12.925 94.2423 8.65295C94.0327 15.9495 93.4346 31.8365 92.5374 41.3785M92.5374 41.3785C92.3688 43.1718 92.1896 44.741 92.0004 45.987C92.1355 44.678 92.312 43.1092 92.5374 41.3785ZM92.5374 41.3785C93.8157 31.5665 96.6682 16.5541 102.463 14.2252C109.936 11.2217 110.496 17.94 109.936 22.955C109.23 29.2703 106.244 39.165 108.254 42.8294C109.375 44.8725 111.991 43.9438 114.98 42.0864C115.596 41.7035 116.252 41.3128 116.915 40.8848M116.915 40.8848C119.468 39.2367 122.124 37.0372 123.013 32.6136C123.932 28.0457 122.079 25.5554 119.651 28.3415C117.796 30.4689 115.942 36.3863 116.915 40.8848ZM116.915 40.8848C117.216 42.2779 117.789 43.5348 118.717 44.5011C122.155 48.0827 126.742 44.3868 128.326 42.0435M128.326 42.0435C128.549 41.7133 128.713 41.41 128.805 41.1577C129.552 39.1145 130.86 35.0282 130.3 33.3566C129.865 32.0603 128.307 38.2468 128.326 42.0435ZM128.326 42.0435C128.332 43.1431 128.469 44.0422 128.805 44.5011C130.3 46.5442 135.344 46.1727 137.025 42.0864C137.473 40.9995 137.827 40.1491 138.118 39.4514M138.118 39.4514C138.919 37.526 139.23 36.7631 139.641 35.3997C140.201 33.5423 137.95 32.7993 138.333 35.3997C138.486 36.4341 138.221 37.9094 138.118 39.4514ZM138.118 39.4514C137.961 41.7858 138.174 44.2732 140.762 45.6155C145.059 47.8444 151.598 43.2009 149.73 35.3997C148.123 30.6095 150.477 37.0714 151.411 38.1858C152.256 39.1939 154.847 39.6276 157.041 39.093M157.041 39.093C157.793 38.9097 158.498 38.6126 159.071 38.1858C161.313 36.5142 164.862 28.5273 163.181 19.7974C161.913 13.2165 156.505 29.3293 157.041 39.093ZM157.041 39.093C157.216 42.2812 158.025 44.7925 159.818 45.6155C164.513 47.7696 168.762 42.0864 170.28 38.9309M191.706 41.274C191.342 42.0464 190.923 42.8792 190.458 43.7581C188.589 47.2872 182.985 46.3585 180.929 44.1296C180.778 43.9656 180.621 43.814 180.479 43.6502M191.706 41.274C192.803 38.945 193.4 37.1653 193.26 36.3284C193.073 35.214 192.513 35.5855 192.326 36.3284C192.199 36.8321 191.643 39.2135 191.706 41.274ZM191.706 41.274C191.735 42.2531 191.905 43.1598 192.326 43.7581C193.355 45.2203 198.437 47.9488 201.374 43.0626M201.374 43.0626C202.167 41.7421 202.804 39.8653 203.162 37.2571C203.162 35.5855 202.414 35.9569 202.228 36.3284C202.104 36.5734 201.087 40.2921 201.374 43.0626ZM201.374 43.0626C201.521 44.4931 202.017 45.6707 203.162 45.987C206.525 46.9157 208.482 39.6322 210.448 36.6999C211.734 34.7818 213.943 33.5973 215.874 33.9882M215.874 33.9882C216.784 34.1724 217.633 34.7065 218.295 35.6784M215.874 33.9882C216.938 34.151 217.879 34.8517 218.295 35.6784M215.874 33.9882C215.426 33.9197 214.956 33.9465 214.495 34.0995C211.692 35.0282 208.964 38.2031 209.327 40.972C210.448 49.5161 221.986 46.6333 224.273 40.7862C224.459 40.3104 224.652 39.8016 224.848 39.2662M218.295 35.6784C218.676 36.239 218.996 36.9454 219.229 37.8144C219.06 37.2571 218.855 36.7928 218.295 35.6784ZM224.848 39.2662C227.415 32.2781 230.639 20.7533 228.383 18.683C224.461 15.0831 221.07 27.7843 223.713 36.1427C224.072 37.281 224.444 38.3225 224.848 39.2662ZM224.848 39.2662C226.756 43.712 229.407 45.987 235.109 45.987M170.28 38.9309C171.215 36.1427 172.514 34.8924 173.643 34.0995C175.138 33.0506 178.127 32.7993 178.874 36.3284C179.482 39.1989 179.348 41.7007 180.182 43.2342M170.28 38.9309C169.907 40.972 169.085 43.6095 172.522 45.244C175.499 46.6592 178.565 45.4901 180.479 43.6502M180.479 43.6502C181.328 42.8338 181.95 41.8853 182.237 40.972C183.171 38.0001 183.171 37.0714 182.985 36.5142C182.798 35.9569 179.995 42.3388 180.182 43.2342M180.479 43.6502C180.368 43.5228 180.266 43.388 180.182 43.2342"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path></svg
-        >
-        <span class="sr-only">Elyse Newland</span>
+        We're on a mission to create the highest-quality, evidence-based stroke
+        recovery education using language that survivors will understand.
       </p>
-      <p
-        class="flex flex-wrap items-center gap-2 font-exteded text-base leading-none tracking-tight md:text-lg">
-        <span>Founder & Director</span>
-        <span class="h-1 w-1 rotate-45 bg-primary-dark"></span>
-        <span>OTD, OTR/L, CSRS</span>
+
+      <p>
+        Since launching, our direct approach of sharing free recovery education
+        on social platforms has exceeded expectations. In just three years,
+        we've seen significant growth and, most importantly, countless stroke
+        survivors have told us how crucial our educational resources have been
+        for their home recovery.
       </p>
-    </div>
+
+      <!-- <div
+        class="mb-20 justify-self-center xl:col-start-2 xl:row-span-full xl:hidden">
+        <div class="relative -z-10 inline-block">
+          <img
+            class="relative z-10 w-full max-w-[60vw] rounded-b-full md:max-w-[40vw] xl:max-w-[28.125rem]"
+            src="/assets/images/elyse-newland-tanktop-portrait.jpg"
+            srcset="/assets/images/elyse-newland-tanktop-portrait.jpg,
+                    /assets/images/elyse-newland-tanktop-portrait@2x.jpg 2x"
+            alt="Portrait of Elyse Newland smilling in her green Post Stroke polo shirt"
+            width="450"
+            height="600"
+            loading="lazy"
+          />
+
+          <div
+            class="absolute -right-[20%] top-[68%] z-10 aspect-square h-auto w-1/2 max-w-[16.875rem] rounded-full border-2 border-moss-400 xl:top-[65%] xl:w-2/3">
+          </div>
+
+          <div
+            class="bg-grain absolute -right-[20%] top-[68%] z-0 aspect-square h-auto w-1/2 max-w-[16.875rem] rounded-full bg-moss-400 xl:top-[65%] xl:w-2/3">
+          </div>
+        </div>
+      </div> -->
+
+      <p>
+        To sustain our mission, we need more funding to cover the rising costs
+        of producing high-quality education and to compensate our dedicated
+        experts.
+      </p>
+
+      <p>
+        This important month, we need your support more than ever. Help us
+        ensure that our stroke recovery education remains free and accessible
+        for the growing number of survivors who depend on us.
+      </p>
+
+      <p>
+        Will you help us make a difference by funding free, high-quality stroke
+        recovery education for all?
+      </p>
+
+      <div>
+        <p>
+          <svg
+            role="img"
+            class="w-48 stroke-primary-dark md:w-52"
+            width="237"
+            height="59"
+            viewBox="0 0 237 59"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            loading="lazy"
+            ><path
+              d="M18.9717 11.9963C21.2348 4.50485 16.2697 1.15793 10.4436 1.73985C4.56125 2.32738 3.0367 7.39365 4.29768 10.8201C5.55865 14.2465 8.24969 17.2176 14.0164 15.0082C-3.64893 21.7763 2.78564 37.3124 4.86406 40.7326C9.20318 47.873 16.8773 47.3733 21.498 42.5208M21.498 42.5208C19.7735 40.435 18.7688 37.6023 18.9718 34.7156C19.3573 29.2355 22.219 24.0123 23.3962 24.0123C24.7307 24.0123 26.5619 26.6461 25.1162 35.1478C24.6095 38.1277 23.2811 40.6483 21.498 42.5208ZM21.498 42.5208C23.0474 44.3948 25.1779 45.666 27.5356 45.8318C30.831 46.0636 33.0445 44.0288 34.4633 41.8244M34.4633 41.8244C35.1894 40.6961 35.7074 39.5235 36.0557 38.5875C37.0846 35.8228 36.3802 31.601 35.5499 31.5426C34.909 31.4976 32.4908 37.3809 34.4633 41.8244ZM34.4633 41.8244C35.046 43.1372 36.012 44.3243 37.5203 45.1958C44.1413 49.021 47.4641 39.7421 45.9152 33.2915C46.7488 36.4327 48.2902 42.2082 49.3558 46.1105M49.3558 46.1105C49.7517 47.5603 50.0819 48.7516 50.2857 49.4531C51.2262 52.6901 51.823 56.0698 49.0725 57.2115C46.322 58.3531 44.1372 56.1968 45.3439 53.2777C45.9241 51.8741 47.6499 49.1221 49.3558 46.1105ZM49.3558 46.1105C51.1976 42.8587 53.0161 39.3044 53.344 36.818C53.6974 34.1375 52.9808 30.117 52.9808 30.117C56.3681 36.2947 58.0918 41.2411 58.4456 43.6921M58.4456 43.6921C58.5318 44.2893 58.5367 44.7384 58.4645 45.021C58.0039 46.8244 52.7366 45.7863 52.8183 44.6239C52.9001 43.4614 54.3407 44.0634 56.3641 44.0388C56.8384 44.0331 57.5681 43.9108 58.4456 43.6921ZM58.4456 43.6921C59.808 43.3526 61.5268 42.7809 63.2001 42.0523M63.2001 42.0523C65.0467 41.2483 66.838 40.2532 68.0337 39.1686C71.0108 36.4681 71.4901 32.7363 68.5009 32.526C65.6529 32.3257 62.315 38.0436 63.2001 42.0523ZM63.2001 42.0523C63.5537 43.6535 64.581 44.982 66.5826 45.5517C72.2679 47.17 75.596 45.2087 75.596 45.2087M81.9119 13.4822C81.9119 13.4822 82.8726 17.0824 86.5825 16.6398C91.2531 16.0826 93.495 12.925 94.2423 8.65295C94.0327 15.9495 93.4346 31.8365 92.5374 41.3785M92.5374 41.3785C92.3688 43.1718 92.1896 44.741 92.0004 45.987C92.1355 44.678 92.312 43.1092 92.5374 41.3785ZM92.5374 41.3785C93.8157 31.5665 96.6682 16.5541 102.463 14.2252C109.936 11.2217 110.496 17.94 109.936 22.955C109.23 29.2703 106.244 39.165 108.254 42.8294C109.375 44.8725 111.991 43.9438 114.98 42.0864C115.596 41.7035 116.252 41.3128 116.915 40.8848M116.915 40.8848C119.468 39.2367 122.124 37.0372 123.013 32.6136C123.932 28.0457 122.079 25.5554 119.651 28.3415C117.796 30.4689 115.942 36.3863 116.915 40.8848ZM116.915 40.8848C117.216 42.2779 117.789 43.5348 118.717 44.5011C122.155 48.0827 126.742 44.3868 128.326 42.0435M128.326 42.0435C128.549 41.7133 128.713 41.41 128.805 41.1577C129.552 39.1145 130.86 35.0282 130.3 33.3566C129.865 32.0603 128.307 38.2468 128.326 42.0435ZM128.326 42.0435C128.332 43.1431 128.469 44.0422 128.805 44.5011C130.3 46.5442 135.344 46.1727 137.025 42.0864C137.473 40.9995 137.827 40.1491 138.118 39.4514M138.118 39.4514C138.919 37.526 139.23 36.7631 139.641 35.3997C140.201 33.5423 137.95 32.7993 138.333 35.3997C138.486 36.4341 138.221 37.9094 138.118 39.4514ZM138.118 39.4514C137.961 41.7858 138.174 44.2732 140.762 45.6155C145.059 47.8444 151.598 43.2009 149.73 35.3997C148.123 30.6095 150.477 37.0714 151.411 38.1858C152.256 39.1939 154.847 39.6276 157.041 39.093M157.041 39.093C157.793 38.9097 158.498 38.6126 159.071 38.1858C161.313 36.5142 164.862 28.5273 163.181 19.7974C161.913 13.2165 156.505 29.3293 157.041 39.093ZM157.041 39.093C157.216 42.2812 158.025 44.7925 159.818 45.6155C164.513 47.7696 168.762 42.0864 170.28 38.9309M191.706 41.274C191.342 42.0464 190.923 42.8792 190.458 43.7581C188.589 47.2872 182.985 46.3585 180.929 44.1296C180.778 43.9656 180.621 43.814 180.479 43.6502M191.706 41.274C192.803 38.945 193.4 37.1653 193.26 36.3284C193.073 35.214 192.513 35.5855 192.326 36.3284C192.199 36.8321 191.643 39.2135 191.706 41.274ZM191.706 41.274C191.735 42.2531 191.905 43.1598 192.326 43.7581C193.355 45.2203 198.437 47.9488 201.374 43.0626M201.374 43.0626C202.167 41.7421 202.804 39.8653 203.162 37.2571C203.162 35.5855 202.414 35.9569 202.228 36.3284C202.104 36.5734 201.087 40.2921 201.374 43.0626ZM201.374 43.0626C201.521 44.4931 202.017 45.6707 203.162 45.987C206.525 46.9157 208.482 39.6322 210.448 36.6999C211.734 34.7818 213.943 33.5973 215.874 33.9882M215.874 33.9882C216.784 34.1724 217.633 34.7065 218.295 35.6784M215.874 33.9882C216.938 34.151 217.879 34.8517 218.295 35.6784M215.874 33.9882C215.426 33.9197 214.956 33.9465 214.495 34.0995C211.692 35.0282 208.964 38.2031 209.327 40.972C210.448 49.5161 221.986 46.6333 224.273 40.7862C224.459 40.3104 224.652 39.8016 224.848 39.2662M218.295 35.6784C218.676 36.239 218.996 36.9454 219.229 37.8144C219.06 37.2571 218.855 36.7928 218.295 35.6784ZM224.848 39.2662C227.415 32.2781 230.639 20.7533 228.383 18.683C224.461 15.0831 221.07 27.7843 223.713 36.1427C224.072 37.281 224.444 38.3225 224.848 39.2662ZM224.848 39.2662C226.756 43.712 229.407 45.987 235.109 45.987M170.28 38.9309C171.215 36.1427 172.514 34.8924 173.643 34.0995C175.138 33.0506 178.127 32.7993 178.874 36.3284C179.482 39.1989 179.348 41.7007 180.182 43.2342M170.28 38.9309C169.907 40.972 169.085 43.6095 172.522 45.244C175.499 46.6592 178.565 45.4901 180.479 43.6502M180.479 43.6502C181.328 42.8338 181.95 41.8853 182.237 40.972C183.171 38.0001 183.171 37.0714 182.985 36.5142C182.798 35.9569 179.995 42.3388 180.182 43.2342M180.479 43.6502C180.368 43.5228 180.266 43.388 180.182 43.2342"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path></svg
+          >
+          <span class="sr-only">Elyse Newland</span>
+        </p>
+        <p
+          class="flex flex-wrap items-center gap-2 font-exteded text-base leading-none tracking-tight md:text-lg">
+          <span>Founder & Director</span>
+          <span class="h-1 w-1 rotate-45 bg-primary-dark"></span>
+          <span>OTD, OTR/L, CSRS</span>
+        </p>
+      </div>
+    </section>
+
+    <section
+      class="relative overflow-hidden border-y-2 border-border bg-page-offset">
+      <div class="container relative z-10 py-[--container-padding-y]">
+        <HeadingGroup
+          class="mb-7 items-center text-center md:mb-14"
+          heading="Free eBook with Every Donation"
+        />
+
+        <div
+          class="bg-grain relative mx-auto mb-7 h-48 w-full max-w-[62.5rem] overflow-hidden rounded-lg bg-plum-400 sm:aspect-video sm:h-auto md:mb-14 md:rounded-xl">
+          <img
+            class="absolute inset-0 z-10 h-full w-full object-contain p-5 shadow-xl sm:p-8"
+            src="/assets/images/stroke-recovery-momentum-ebook.png"
+            srcset="/assets/images/stroke-recovery-momentum-ebook.png,
+                    /assets/images/stroke-recovery-momentum-ebook@2x.png 2x"
+            alt="Stroke Recovery Momentum by Stephanie Hopwood eBook Cover"
+            width="374"
+            height="490"
+            loading="lazy"
+          />
+
+          <img
+            class="absolute left-0 top-0 z-0 h-full w-full object-cover opacity-40"
+            src="/assets/images/wave-texture.svg"
+            role="presentation"
+            alt="Wave Texture"
+            loading="lazy"
+          />
+        </div>
+
+        <div
+          class="mx-auto max-w-max items-start gap-[min(5vw,3.125rem)] lg:flex lg:flex-row">
+          <img
+            class="w-[min(35vw,300px)] rounded-full max-lg:float-right max-lg:mb-3.5 max-lg:ml-3 max-lg:[shape-outside:circle(50%)] lg:order-last"
+            src="/assets/images/author-stephanie-hopwood.jpg"
+            srcset="/assets/images/author-stephanie-hopwood.jpg,
+                    /assets/images/author-stephanie-hopwood@2x.jpg 2x"
+            alt="Portrait of author Stephanie Hopwood"
+            width="300"
+            height="300"
+            loading="lazy"
+          />
+
+          <div
+            class="text-pretty text-lg text-body *:mb-[1.3em] lg:max-w-[36rem]">
+            <p>
+              Physical Therapist, Certified Stroke Rehab Specialist, and stroke
+              survivor Stephanie Hopwood is generously donating a copy of her
+              new ebook, 'Stroke Recovery Momentum,' to anyone who makes a
+              donation to Post Stroke during May.
+            </p>
+
+            <p>
+              This book is for all stroke survivors, whether you had a stroke
+              recently or it’s been years. It’s filled with amazing advice on
+              how to keep the momentum going on your stroke recovery journey,
+              even when feeling frustrated and impatient. Stephanie also shares
+              her unique perspective as a PT who experienced a stroke and how it
+              changed the way she practiced.
+            </p>
+
+            <p>
+              We are so excited for her first book and can’t thank her enough
+              for letting us share this with the community!
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Circles -->
+      <div
+        class="absolute -bottom-[500px] -right-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+      </div>
+      <div
+        class="absolute -bottom-[400px] -right-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden">
+      <div
+        class="container relative z-10 flex flex-col items-center gap-7 py-[--container-padding-y] md:gap-10">
+        <HeadingGroup
+          class="items-center text-center"
+          heading="Watch our Interview with the Author"
+        />
+
+        <lite-youtube
+          class="[background-image:url('https://i.ytimg.com/vi/ZAN0wSTClsQ/maxresdefault.jpg'] w-full max-w-[62.5rem] rounded-lg md:rounded-xl"
+          videoid="ZAN0wSTClsQ"
+          params="modestbranding=1&rel=0"></lite-youtube>
+
+        <p class="max-w-[40.625rem] text-pretty text-lg">
+          I hope you enjoy this conversation with Stephanie. We'll talk about
+          her unique journey as both a stroke survivor and a PT. She also offers
+          valuable tips on maintaining momentum in your stroke recovery, even
+          when it’s frustrating!
+        </p>
+      </div>
+      <!-- Circles -->
+      <div
+        class="absolute -bottom-[500px] -left-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+      </div>
+      <div
+        class="absolute -bottom-[400px] -left-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+      </div>
+    </section>
+
+    <!-- <section class="bg-page-offset">
+      <div class="container py-[--container-padding-y]">
+        <HeadingGroup
+          class="mb-7 max-w-[42rem] items-center text-center"
+          heading="We’re Made Possible By These Amazing Patrons"
+          body="We're still amazed at how many generous survivors donate their hard-earned money to directly support our cause each month. We can’t thank you enough ❤️"
+        />
+
+        <a class="btn btn-primary" href={patrion_url}>Become a Patron</a>
+      </div> -->
   </main>
+
+  <MiniDonationBar />
 </Layout>

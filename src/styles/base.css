@@ -11,21 +11,27 @@
     --container-padding-x: clamp(
       1.125rem,
       5vw,
-      4.75rem
+      6.25rem
     ); /* 18px | 5vw | 76px */
 
     --container-padding-y: clamp(
-      1.75rem,
+      2.125rem,
       5vw,
-      6.25rem
+      7.5rem
     ); /* 28px | 5vw | 100px */
-    --nav-item-height: 62px;
+    --nav-item-height: 3.875rem; /* 62px */
+    --nav-max-width: utopia.clamp(256, 300, 1024, 2200); /* 256px */
 
     /* -------------- */
     /* Typography     */
     /* -------------- */
 
-    --font-size-3xl: clamp(1.75rem, 2vw + 1.25rem, 2.5rem); /* 28 - 40 */
+    --font-size-sm: utopia.clamp(13, 14, 375, 1600);
+    --font-size-base: utopia.clamp(15, 16, 375, 1600);
+    --font-size-lg: utopia.clamp(16, 18, 375, 1600);
+    --font-size-xl: utopia.clamp(18, 24, 375, 1600);
+    --font-size-2xl: utopia.clamp(22, 32, 375, 1600);
+    --font-size-3xl: utopia.clamp(24, 40, 375, 1600);
 
     /* -------------- */
     /* Color Palette  */
@@ -56,6 +62,8 @@
     --color-marine-100: 220deg 69% 57%;
     --color-marine-400: 220deg 74% 49%;
     --color-marine-800: 220deg 64% 19%;
+
+    --dot-size: 16px;
   }
 
   /* -------------- */
@@ -98,7 +106,7 @@
   select {
     background-color: var(--page);
     color: var(--body);
-    @apply rounded-lg border-2 border-border bg-page px-4 py-3.5 text-body focus:border-primary-dark focus:!outline-none focus:ring-0;
+    @apply rounded-lg border-2 border-border bg-page-light px-4 py-3.5 text-body focus:border-primary-dark focus:!outline-none focus:ring-0;
   }
 
   textarea {
@@ -114,7 +122,7 @@
   /* -------------- */
 
   .btn {
-    @apply inline-flex items-center gap-1 rounded-lg px-6 py-5 font-exteded leading-none outline-offset-2 transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-1 rounded-lg px-6 py-5 font-exteded leading-none outline-offset-2 transition-colors duration-200;
   }
 
   /* triangle */
@@ -123,6 +131,10 @@
     border-bottom: 8px solid currentColor;
     border-left: 8px solid transparent;
     @apply block size-0 -rotate-45 opacity-50 transition-opacity duration-200;
+  }
+
+  .btn[download]::after {
+    @apply -translate-y-1 translate-x-1 rotate-45;
   }
 
   .btn:hover::after {
@@ -134,6 +146,78 @@
   }
 }
 
+/* -------------- */
+/* Lite Youtube   */
+/* -------------- */
+
+lite-youtube {
+  background-color: #000;
+  position: relative;
+  display: block;
+  contain: content;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+lite-youtube::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(100% / (16 / 9));
+}
+lite-youtube > iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+
+/* play button */
+lite-youtube > .lty-playbtn {
+  display: block;
+  width: 68px;
+  height: 48px;
+  position: absolute;
+  cursor: pointer;
+  transform: translate3d(-50%, -50%, 0);
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  background-color: transparent;
+  /* YT's actual play button svg */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>');
+  filter: grayscale(119%) opacity(0.8) contrast(250%);
+  transition: filter 0.1s cubic-bezier(0, 0, 0.2, 1);
+  border: none;
+}
+
+lite-youtube:hover > .lty-playbtn,
+lite-youtube .lty-playbtn:focus {
+  filter: none;
+}
+
+/* Post-click styles */
+lite-youtube.lyt-activated {
+  cursor: unset;
+}
+lite-youtube.lyt-activated::before,
+lite-youtube.lyt-activated > .lty-playbtn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+lite-youtube .lyt-visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* ----------------------- */
 /*  Light Theme (Default)  */
 /* ----------------------- */
@@ -141,6 +225,7 @@
 :root,
 html[data-theme="light"] {
   /* Page Backgrounds */
+  --color-page-light: var(--color-white);
   --color-page: var(--color-stone-100);
   --color-page-offset: var(--color-stone-200);
 

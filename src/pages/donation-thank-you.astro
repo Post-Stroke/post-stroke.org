@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import HeadingGroup from "../components/HeadingGroup.astro";
+import Icon from "../components/Icon.astro";
+---
+
+<Layout title="Thanks for Your Donation!">
+  <main class="flex-1">
+    <Hero class="bg-plum-400">
+      Your<br />
+      Support<br />
+      Matters
+    </Hero>
+
+    <!-- Intro Section -->
+    <section class="container py-[--container-padding-y]">
+      <div>
+        <HeadingGroup
+          class="mb-7"
+          heading="Thank You!"
+          subheading="Your Donation Will be Put to Good Use"
+        />
+
+        <div class="max-w-[36rem] text-pretty text-lg text-body">
+          <p class="mb-[1.3em]">
+            Your support will be transformed into free, high-quality recovery
+            education ensuring that stroke survivors around the world can
+            optimize their recovery at home. Thanks to you, we can bridge the
+            critical gap for stroke survivors who often don’t get enough therapy
+            after leaving the hospital!
+          </p>
+
+          <a
+            href="#ebook"
+            class="inline-block w-full rounded-lg border-2 border-border bg-page-offset p-4 text-center font-exteded text-base leading-tight max-md:sticky max-md:bottom-[--container-padding-x] md:max-w-max">
+            Don't forget your free eBook 👇
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative overflow-hidden border-y-2 border-border bg-page-offset"
+      id="ebook">
+      <div class="container py-[--container-padding-y]">
+        <div
+          class="relative z-10 mx-auto flex max-w-[50rem] flex-col gap-4 rounded-lg border-2 border-border bg-page-light p-4 sm:gap-5 sm:p-5 md:flex-row md:items-center">
+          <!-- Line Pop -->
+          <Icon
+            class="absolute -right-6 -top-6 hidden stroke-primary-dark text-[1.6875rem] md:block"
+            icon="line-pop"
+          />
+          <div
+            class="bg-grain relative h-48 w-full flex-shrink-0 overflow-hidden rounded-md bg-plum-400 md:h-auto md:w-44 md:self-stretch">
+            <img
+              class="absolute inset-0 z-10 h-full w-full object-contain p-3.5 shadow-xl"
+              src="/assets/images/stroke-recovery-momentum-ebook.png"
+              srcset="/assets/images/stroke-recovery-momentum-ebook.png,
+                    /assets/images/stroke-recovery-momentum-ebook@2x.png 2x"
+              alt="Stroke Recovery Momentum by Stephanie Hopwood eBook Cover"
+              width="374"
+              height="490"
+              loading="lazy"
+            />
+
+            <img
+              class="absolute left-0 top-0 z-0 h-full w-full object-cover opacity-40"
+              src="/assets/images/wave-texture.svg"
+              role="presentation"
+              alt="Wave Texture"
+              loading="lazy"
+            />
+          </div>
+          <div class="grid gap-3.5">
+            <h2 class="font-exteded text-xl leading-[1.10] tracking-tight">
+              Grab Your Free eBook!
+            </h2>
+            <p class="text-pretty text-base">
+              Physical Therapist, Certified Stroke Rehab Specialist, and stroke
+              survivor Stephanie Hopwood is generously donating a copy of her
+              new ebook to anyone who makes a donation to Post Stroke during
+              May.
+            </p>
+            <a
+              class="btn btn-primary justify-between lg:max-w-max"
+              href="/assets/downloads/stroke-recovery-momentum.pdf"
+              download="Stroke Recovery Momentum by Stephanie Hopwood"
+              >Download eBook PDF</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Circles -->
+      <div
+        class="absolute -bottom-[500px] -right-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+      </div>
+      <div
+        class="absolute -bottom-[400px] -right-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+      </div>
+    </section>
+  </main>
+</Layout>

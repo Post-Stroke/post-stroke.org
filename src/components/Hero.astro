@@ -5,11 +5,13 @@ import Icon from "../components/Icon.astro";
 
 <div
   class={className +
-    " relative p-[--container-padding-x] flex items-center text-white font-exteded uppercase leading-[.9] tracking-tight text-[clamp(2.75rem,9vw,6.875rem)] overflow-hidden bg-grain min-h-56"}>
-  <h1><slot /></h1>
+    " relative flex items-center text-white font-exteded uppercase leading-[.9] tracking-tight text-[clamp(2.55rem,8vw,6.875rem)] overflow-hidden bg-grain min-h-56"}>
+  <div class="container py-[--container-padding-x]">
+    <h1><slot /></h1>
 
-  <Icon
-    icon="logomark"
-    class="absolute right-[-20vw] top-1/2 z-10 -translate-y-1/2 fill-white text-[clamp(22rem,60vw,62rem)] opacity-[4%] sm:right-[min(-150px,-6%)]"
-  />
+    <Icon
+      icon="logomark"
+      class="absolute right-[-20vw] top-1/2 z-10 -translate-y-1/2 fill-white text-[clamp(22rem,60vw,62rem)] opacity-[4%] sm:right-[min(-150px,-6%)]"
+    />
+  </div>
 </div>
