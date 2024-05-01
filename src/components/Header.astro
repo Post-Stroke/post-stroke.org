@@ -52,7 +52,7 @@ const currentPath = Astro.url.pathname;
           <a
             href={url}
             class:list={[
-              "group flex min-h-[--nav-item-height] items-center gap-2.5 px-5 py-4 leading-none opacity-85 transition-all hover:bg-page-offset hover:text-body hover:opacity-100 focus:text-body focus:opacity-100 focus:-outline-offset-8",
+              "group flex min-h-[--nav-item-height] items-center gap-2.5 px-5 py-4 leading-none opacity-85 transition-colors hover:bg-page-offset hover:text-body hover:opacity-100 focus:text-body focus:opacity-100 focus:-outline-offset-8",
               { "text-body opacity-100": currentPath === url },
               { "text-muted opacity-80": currentPath !== url },
             ]}>
