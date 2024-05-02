@@ -11,5 +11,5 @@ export const patrion_url = "https://www.patreon.com/poststroke";
 
 // Fundraiser
 export const fundraiser_goal_amount = "10,000";
-export const fundraiser_raised_amount = "671";
-export const fundraiser_raised_percent = "6.3";
+export const fundraiser_raised_amount = "732";
+export const fundraiser_raised_percent = "7.3";
