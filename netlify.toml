@@ -12,3 +12,8 @@
   for = "assets/images/*.svg"
     [headers.values]
     Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "assets/images/*"
+    [headers.values]
+    Cache-Control = "public, max-age=604800"
