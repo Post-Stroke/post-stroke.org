@@ -10,6 +10,25 @@ export const donate_url =
 export const patrion_url = "https://www.patreon.com/poststroke";
 
 // Fundraiser
-export const fundraiser_goal_amount = "10,000";
-export const fundraiser_raised_amount = "1,247";
-export const fundraiser_raised_percent = "12.5";
+const fundraiser_goal = 10000;
+const fundraiser_raised = 1344;
+
+export const formated_fundraiser_goal = fundraiser_goal.toLocaleString("en-US");
+
+export const formated_fundraiser_raised =
+  fundraiser_raised.toLocaleString("en-US");
+
+const calculatePercentage = (
+  fundraiser_raised: number,
+  fundraiser_goal: number,
+) => {
+  if (fundraiser_goal === 0) {
+    throw new Error("Total cannot be zero.");
+  }
+  return (fundraiser_raised / fundraiser_goal) * 100;
+};
+
+export const fundraiser_raised_percent = calculatePercentage(
+  fundraiser_raised,
+  fundraiser_goal,
+);

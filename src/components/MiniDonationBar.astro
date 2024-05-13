@@ -1,8 +1,8 @@
 ---
 import {
   donate_url,
-  fundraiser_goal_amount,
-  fundraiser_raised_amount,
+  formated_fundraiser_goal,
+  formated_fundraiser_raised,
   fundraiser_raised_percent,
 } from "../config";
 ---
@@ -26,8 +26,8 @@ gap-3 sm:flex-row md:gap-5">
 
       <p
         class="flex flex-wrap justify-between gap-x-2 text-sm leading-tight sm:justify-normal">
-        <strong class="font-exteded">${fundraiser_raised_amount}</strong> raised
-        of ${fundraiser_goal_amount} goal
+        <strong class="font-exteded">${formated_fundraiser_raised}</strong> raised
+        of ${formated_fundraiser_goal} goal
       </p>
     </div>
 
