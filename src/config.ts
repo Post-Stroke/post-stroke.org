@@ -11,7 +11,7 @@ export const patrion_url = "https://www.patreon.com/poststroke";
 
 // Fundraiser
 const fundraiser_goal = 10000;
-const fundraiser_raised = 1344;
+const fundraiser_raised = 1419;
 
 export const formated_fundraiser_goal = fundraiser_goal.toLocaleString("en-US");
 
