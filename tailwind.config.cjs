@@ -20,6 +20,11 @@ module.exports = {
       // Body Color
       body: "hsl(var(--color-body) / <alpha-value>)",
 
+      // Buttons
+      "btn-text": "hsl(var(--color-btn-text) / <alpha-value>)",
+      "btn-primary": "hsl(var(--color-btn-primary) / <alpha-value>)",
+      "btn-primary-dark": "hsl(var(--color-btn-primary-dark) / <alpha-value>)",
+
       // Muted Color
       muted: "hsl(var(--color-muted) / <alpha-value>)",
 

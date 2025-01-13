@@ -37,7 +37,7 @@
     /* Color Palette  */
     /* -------------- */
     --color-white: 0deg 0% 100%;
-
+    --color-stone-900: 40deg 4% 4%;
     --color-stone-800: 40deg 8% 10%;
     --color-stone-700: 40deg 8% 17%;
     --color-stone-600: 40deg 10% 31%;
@@ -179,7 +179,7 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-body hover:bg-primary-dark focus:bg-primary-dark;
+    @apply text-btn-text bg-btn-primary hover:bg-btn-primary-dark focus:bg-btn-primary-dark;
   }
 }
 
@@ -278,22 +278,40 @@ html[data-theme="light"] {
   /* Primary Color */
   --color-primary: var(--color-peach-400);
   --color-primary-dark: var(--color-peach-800);
+
+  /* Buttons */
+  --color-btn-text: var(--color-body);
+  --color-btn-primary: var(--color-primary);
+  --color-btn-primary-dark: var(--color-primary-dark);
 }
 
 /* ----------------------- */
 /*  Dark                   */
 /* ----------------------- */
 
-/* html[data-theme="dark"] {
-  --color-page: var(--color-stone-800);
-  --color-page-offset: var(--color-stone-800);
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Page Backgrounds */
+    --color-page-light: 40deg 4% 6%;
+    --color-page: var(--color-stone-900);
+    --color-page-offset: 40deg 4% 6%;
 
-  --color-border: var(--color-stone-700);
+    /* Border */
+    --color-border: var(--color-stone-800);
 
-  --color-body: var(--color-white);
+    /* Body Text */
+    --color-body: var(--color-stone-100);
 
-  --color-muted: var(--color-stone-300);
+    /* Muted Text */
+    --color-muted: var(--color-stone-500);
 
-  --color-primary: var(--color-peach-400);
-  --color-primary-dark: var(--color-peach-800);
-} */
+    /* Primary Color */
+    --color-primary: var(--color-peach-400);
+    --color-primary-dark: var(--color-peach-800);
+
+    /* Buttons */
+    --color-btn-text: var(--color-stone-900);
+    --color-btn-primary: var(--color-primary-dark);
+    --color-btn-primary-dark: var(--color-primary);
+  }
+}
