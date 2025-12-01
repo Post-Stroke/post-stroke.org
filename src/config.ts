@@ -6,12 +6,12 @@ export const SITE_DESCRIPTION =
   "Nonprofit Making Stroke Recovery Accessible to Everyone";
 export const SITE_OG_IMG = "/assets/images/open-graph-v2.jpg";
 export const donate_url =
-  "https://www.paypal.com/donate?campaign_id=M65Z6KWKH3M72";
+  "https://www.paypal.com/donate?campaign_id=GUHLWVN5DKQC2";
 export const patrion_url = "https://www.patreon.com/poststroke";
 
 // Fundraiser
-const fundraiser_goal = 10000;
-const fundraiser_raised = 3177;
+const fundraiser_goal = 5000;
+const fundraiser_raised = 25;
 
 export const formated_fundraiser_goal = fundraiser_goal.toLocaleString("en-US");
 
