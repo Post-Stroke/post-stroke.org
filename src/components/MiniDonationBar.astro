@@ -9,8 +9,7 @@ import {
 
 <div class="sticky bottom-0 z-20 border-y-2 border-border bg-page-offset">
   <div
-    class="mx-auto flex max-w-[87.5rem] flex-row items-center justify-between
-gap-3 sm:flex-row md:gap-5">
+    class="mx-auto flex max-w-[87.5rem] flex-row items-center justify-between gap-3 sm:flex-row md:gap-5">
     <div class="flex-1 pl-3.5 md:pl-6">
       <div class="mb-2 h-2 w-full rounded-full bg-moss-100/20">
         <div
@@ -18,7 +17,7 @@ gap-3 sm:flex-row md:gap-5">
           aria-valuemin="0"
           aria-valuemax="100"
           aria-label="Fundraiser Progress Bar"
-          class="h-full rounded-full bg-moss-100"
+          class="h-full max-w-full rounded-full bg-moss-100"
           aria-valuenow={fundraiser_raised_percent}
           style={"width: " + fundraiser_raised_percent + "%"}>
         </div>
@@ -31,8 +30,7 @@ gap-3 sm:flex-row md:gap-5">
       </p>
     </div>
 
-    <div class="border-l-2 border-border p-3.5
-md:p-6">
+    <div class="border-l-2 border-border p-3.5 md:p-6">
       <a
         class="btn btn-primary justify-between p-3.5 text-sm leading-none"
         href={donate_url}
