@@ -13,7 +13,7 @@ import HeadingGroup from "../components/HeadingGroup.astro";
     </Hero>
 
     <section
-      class="container grid gap-x-(--container-padding-x) overflow-hidden text-pretty py-(--container-padding-y) text-lg *:mb-[1.3em] xl:grid-cols-[min(50%,37.5rem)_1fr] xl:grid-rows-[repeat(6,auto)]">
+      class="container grid gap-x-(--container-padding-x) overflow-hidden py-(--container-padding-y) text-lg text-pretty *:mb-[1.3em] xl:grid-cols-[min(50%,37.5rem)_1fr] xl:grid-rows-[repeat(6,auto)]">
       <HeadingGroup
         class="mb-7"
         heading="Our Founder"
@@ -30,7 +30,7 @@ import HeadingGroup from "../components/HeadingGroup.astro";
       <div class="mb-20 justify-self-center xl:col-start-2 xl:row-span-full">
         <div class="relative -z-10 inline-block">
           <img
-            class="relative z-10 w-full max-w-[60vw] rounded-br-[clamp(3rem,25vw,12rem)] rounded-tl-[clamp(3rem,25vw,12rem)] md:max-w-[40vw] xl:max-w-112.5"
+            class="relative z-10 w-full max-w-[60vw] rounded-tl-[clamp(3rem,25vw,12rem)] rounded-br-[clamp(3rem,25vw,12rem)] md:max-w-[40vw] xl:max-w-112.5"
             src="/assets/images/elyse-newland-polo-portrait.jpg"
             srcset="/assets/images/elyse-newland-polo-portrait.jpg,
                     /assets/images/elyse-newland-polo-portrait@2x.jpg 2x"
@@ -41,12 +41,12 @@ import HeadingGroup from "../components/HeadingGroup.astro";
           />
           <!-- Top Circle -->
           <div
-            class="absolute left-[-20%] top-[68%] z-10 aspect-square h-auto w-1/2 max-w-67.5 rounded-full border-2 border-primary xl:top-[65%] xl:w-2/3">
+            class="absolute top-[68%] left-[-20%] z-10 aspect-square h-auto w-1/2 max-w-67.5 rounded-full border-2 border-primary xl:top-[65%] xl:w-2/3">
           </div>
 
           <!-- Bottom Circle -->
           <div
-            class="bg-grain absolute left-[-20%] top-[68%] z-0 aspect-square h-auto w-1/2 max-w-67.5 rounded-full bg-primary xl:top-[65%] xl:w-2/3">
+            class="bg-grain absolute top-[68%] left-[-20%] z-0 aspect-square h-auto w-1/2 max-w-67.5 rounded-full bg-primary xl:top-[65%] xl:w-2/3">
           </div>
         </div>
       </div>

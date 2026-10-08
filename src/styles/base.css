@@ -125,8 +125,8 @@
     "GT America Extended", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono:
-    "GT America Mono", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "GT America Mono", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --default-transition-duration: 400ms;
 }
@@ -244,7 +244,7 @@
   }
 
   .btn[download]::after {
-    @apply -translate-y-1 translate-x-1 rotate-45;
+    @apply translate-x-1 -translate-y-1 rotate-45;
   }
 
   .btn:hover::after {
@@ -252,7 +252,7 @@
   }
 
   .btn-primary {
-    @apply text-btn-text bg-btn-primary hover:bg-btn-primary-dark focus:bg-btn-primary-dark;
+    @apply bg-btn-primary text-btn-text hover:bg-btn-primary-dark focus:bg-btn-primary-dark;
   }
 }
 
@@ -281,7 +281,7 @@
   select {
     background-color: var(--page);
     color: var(--body);
-    @apply rounded-lg border-2 border-border bg-page-light px-4 py-3.5 text-body focus:border-primary-dark focus:outline-hidden! focus:ring-0;
+    @apply rounded-lg border-2 border-border bg-page-light px-4 py-3.5 text-body focus:border-primary-dark focus:ring-0 focus:outline-hidden!;
   }
 
   textarea {
