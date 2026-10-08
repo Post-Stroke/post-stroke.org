@@ -3,6 +3,10 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  # Astro 7 requires Node 22.12 or newer
+  NODE_VERSION = "22"
+
 [[headers]]
   for = "/assets/fonts/*"
     [headers.values]

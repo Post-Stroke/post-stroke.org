@@ -89,9 +89,6 @@ module.exports = {
       center: true,
       padding: "var(--container-padding-x)",
       screens: {
-        sm: "100%",
-        md: "100%",
-        lg: "100%",
         xl: "103.125rem",
       },
     },

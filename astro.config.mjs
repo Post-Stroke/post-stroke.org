@@ -15,4 +15,8 @@ export default defineConfig({
   },
 
   trailingSlash: "never",
+
+  // Astro 7 defaults to "jsx", which drops line-break whitespace next to tags
+  // and runs words together in our wrapped prose (e.g. "Pleaselet us know").
+  compressHTML: true,
 });
