@@ -7,6 +7,12 @@
   # Astro 7 requires Node 22.12 or newer
   NODE_VERSION = "22"
 
+# Astro's build output has content hashes in its filenames, so it never changes in place
+[[headers]]
+  for = "/_astro/*"
+    [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[headers]]
   for = "/assets/fonts/*"
     [headers.values]
