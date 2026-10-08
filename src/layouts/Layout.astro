@@ -37,7 +37,7 @@ import "../styles/base.css";
         basic: {
           title: `${SITE_DESCRIPTION}` + " - Post Stroke",
           type: "website",
-          image: `${SITE_OG_IMG}`,
+          image: new URL(SITE_OG_IMG, Astro.site).href,
         },
         optional: {
           description: `${SITE_DESCRIPTION}`,
