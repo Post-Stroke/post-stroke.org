@@ -4,7 +4,9 @@ const iconPath = "/assets/images/icon-sprite.svg#" + icon;
 ---
 
 <svg
-  class={className +
-    " inline-block size-[1em]  fill-[currentColor] align-[-0.145em]"}>
+  class:list={[
+    className,
+    "inline-block size-[1em] fill-[currentColor] align-[-0.145em]",
+  ]}>
   <use xlink:href={iconPath}></use>
 </svg>
