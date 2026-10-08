@@ -14,7 +14,7 @@ import Icon from "../components/Icon.astro";
     </Hero>
 
     <!-- Intro Section -->
-    <section class="container py-[--container-padding-y]">
+    <section class="container py-(--container-padding-y)">
       <div>
         <HeadingGroup
           class="mb-7"
@@ -22,7 +22,7 @@ import Icon from "../components/Icon.astro";
           subheading="Your Donation Will be Put to Good Use"
         />
 
-        <div class="max-w-[36rem] text-pretty text-lg text-body">
+        <div class="max-w-xl text-pretty text-lg text-body">
           <p class="mb-[1.3em]">
             Your support will be transformed into free, high-quality recovery
             education ensuring that stroke survivors around the world can
@@ -33,7 +33,7 @@ import Icon from "../components/Icon.astro";
 
           <a
             href="#ebook"
-            class="inline-block w-full rounded-lg border-2 border-border bg-page-offset p-4 text-center font-exteded text-base leading-tight max-md:sticky max-md:bottom-[--container-padding-x] md:max-w-max">
+            class="inline-block w-full rounded-lg border-2 border-border bg-page-offset p-4 text-center font-exteded text-base leading-tight max-md:sticky max-md:bottom-(--container-padding-x) md:max-w-max">
             Don't forget your free eBook 👇
           </a>
         </div>
@@ -43,16 +43,16 @@ import Icon from "../components/Icon.astro";
     <section
       class="relative overflow-hidden border-y-2 border-border bg-page-offset"
       id="ebook">
-      <div class="container py-[--container-padding-y]">
+      <div class="container py-(--container-padding-y)">
         <div
-          class="relative z-10 mx-auto flex max-w-[50rem] flex-col gap-4 rounded-lg border-2 border-border bg-page-light p-4 sm:gap-5 sm:p-5 md:flex-row md:items-center">
+          class="relative z-10 mx-auto flex max-w-200 flex-col gap-4 rounded-lg border-2 border-border bg-page-light p-4 sm:gap-5 sm:p-5 md:flex-row md:items-center">
           <!-- Line Pop -->
           <Icon
-            class="absolute -right-6 -top-6 hidden stroke-primary-dark text-[1.6875rem] md:block"
+            class="absolute -right-6 -top-6 stroke-primary-dark text-[1.6875rem] max-md:hidden md:block"
             icon="line-pop"
           />
           <div
-            class="bg-grain relative h-48 w-full flex-shrink-0 overflow-hidden rounded-md bg-plum-400 md:h-auto md:w-44 md:self-stretch">
+            class="bg-grain relative h-48 w-full shrink-0 overflow-hidden rounded-md bg-plum-400 md:h-auto md:w-44 md:self-stretch">
             <img
               class="absolute inset-0 z-10 h-full w-full object-contain p-3.5 shadow-xl"
               src="/assets/images/stroke-recovery-momentum-ebook.png"
@@ -93,10 +93,10 @@ import Icon from "../components/Icon.astro";
 
       <!-- Circles -->
       <div
-        class="absolute -bottom-[500px] -right-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+        class="absolute bottom-[-500px] right-[-250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
       </div>
       <div
-        class="absolute -bottom-[400px] -right-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+        class="absolute bottom-[-400px] right-[-500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
       </div>
     </section>
   </main>

@@ -1,6 +1,135 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  @media (width >= --theme(--breakpoint-xs)) {
+    max-width: none;
+  }
+  @media (width >= 103.125rem) {
+    max-width: 103.125rem;
+  }
+}
+
+/* "static" keeps every color variable in the output, including palette
+   entries only referenced by the dark mode overrides at the end of this file. */
+@theme static {
+  --color-*: initial;
+  --color-transparent: transparent;
+
+  /* -------------- */
+  /* Color Palette  */
+  /* -------------- */
+  --color-white: hsl(0deg 0% 100%);
+  --color-stone-900: hsl(40deg 4% 4%);
+  --color-stone-800: hsl(40deg 8% 10%);
+  --color-stone-700: hsl(40deg 8% 17%);
+  --color-stone-600: hsl(40deg 10% 31%);
+  --color-stone-500: hsl(40deg 18% 68%);
+  --color-stone-400: hsl(40deg 27% 80%);
+  --color-stone-300: hsl(40deg 21% 86%);
+  --color-stone-200: hsl(40deg 18% 91%);
+  --color-stone-100: hsl(40deg 16% 94%);
+
+  --color-peach-100: hsl(32deg 87% 81%);
+  --color-peach-400: hsl(32deg 89% 66%);
+  --color-peach-800: hsl(32deg 85% 50%);
+
+  --color-plum-100: hsl(286deg 23% 33%);
+  --color-plum-400: hsl(286deg 24% 24%);
+  --color-plum-800: hsl(286deg 19% 14%);
+
+  --color-moss-100: hsl(77deg 20% 28%);
+  --color-moss-400: hsl(77deg 32% 19%);
+  --color-moss-800: hsl(77deg 32% 14%);
+
+  --color-marine-100: hsl(220deg 69% 57%);
+  --color-marine-400: hsl(220deg 74% 49%);
+  --color-marine-800: hsl(220deg 64% 19%);
+
+  /* ----------------------- */
+  /*  Light Theme (Default)  */
+  /* ----------------------- */
+
+  /* Page Backgrounds */
+  --color-page-light: var(--color-white);
+  --color-page: var(--color-stone-100);
+  --color-page-offset: var(--color-stone-200);
+
+  /* Border */
+  --color-border: var(--color-stone-400);
+
+  /* Body Text */
+  --color-body: var(--color-stone-800);
+
+  /* Muted Text */
+  --color-muted: var(--color-stone-600);
+
+  /* Primary Color */
+  --color-primary: var(--color-peach-400);
+  --color-primary-dark: var(--color-peach-800);
+
+  /* Buttons */
+  --color-btn-text: var(--color-body);
+  --color-btn-primary: var(--color-primary);
+  --color-btn-primary-dark: var(--color-primary-dark);
+}
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 460px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  --text-*: initial;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1em;
+  --text-sm: var(--font-size-sm);
+  --text-sm--line-height: 1.25em;
+  --text-base: var(--font-size-base);
+  --text-base--line-height: 1.5em;
+  --text-lg: var(--font-size-lg);
+  --text-lg--line-height: 1.5em;
+  --text-xl: var(--font-size-xl);
+  --text-xl--line-height: 1.375em;
+  --text-2xl: var(--font-size-2xl);
+  --text-2xl--line-height: 1.25em;
+  --text-3xl: var(--font-size-3xl);
+  --text-3xl--line-height: 1.05em;
+
+  --tracking-*: initial;
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.25em;
+
+  --radius-*: initial;
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius: 0.25rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+  --radius-xl: 1.875rem;
+
+  --font-sans:
+    "GT America", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-exteded:
+    "GT America Extended", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    "GT America Mono", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --default-transition-duration: 400ms;
+}
 
 @layer base {
   :root {
@@ -32,36 +161,6 @@
     --font-size-xl: utopia.clamp(18, 24, 375, 1600);
     --font-size-2xl: utopia.clamp(22, 32, 375, 1600);
     --font-size-3xl: utopia.clamp(24, 40, 375, 1600);
-
-    /* -------------- */
-    /* Color Palette  */
-    /* -------------- */
-    --color-white: 0deg 0% 100%;
-    --color-stone-900: 40deg 4% 4%;
-    --color-stone-800: 40deg 8% 10%;
-    --color-stone-700: 40deg 8% 17%;
-    --color-stone-600: 40deg 10% 31%;
-    --color-stone-500: 40deg 18% 68%;
-    --color-stone-400: 40deg 27% 80%;
-    --color-stone-300: 40deg 21% 86%;
-    --color-stone-200: 40deg 18% 91%;
-    --color-stone-100: 40deg 16% 94%;
-
-    --color-peach-100: 32deg 87% 81%;
-    --color-peach-400: 32deg 89% 66%;
-    --color-peach-800: 32deg 85% 50%;
-
-    --color-plum-100: 286deg 23% 33%;
-    --color-plum-400: 286deg 24% 24%;
-    --color-plum-800: 286deg 19% 14%;
-
-    --color-moss-100: 77deg 20% 28%;
-    --color-moss-400: 77deg 32% 19%;
-    --color-moss-800: 77deg 32% 14%;
-
-    --color-marine-100: 220deg 69% 57%;
-    --color-marine-400: 220deg 74% 49%;
-    --color-marine-800: 220deg 64% 19%;
 
     --dot-size: 16px;
   }
@@ -122,41 +221,15 @@
     background-blend-mode: color-dodge;
   }
 
-  /* ------------------ */
-  /* Inputs             */
-  /* ------------------ */
-
-  [type="text"],
-  [type="email"],
-  [type="url"],
-  [type="password"],
-  [type="number"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="search"],
-  [type="tel"],
-  [type="time"],
-  [type="week"],
-  [multiple],
-  textarea,
-  select {
-    background-color: var(--page);
-    color: var(--body);
-    @apply rounded-lg border-2 border-border bg-page-light px-4 py-3.5 text-body focus:border-primary-dark focus:!outline-none focus:ring-0;
-  }
-
-  textarea {
-    @apply min-h-14;
-  }
-
-  input::placeholder {
-    @apply font-mono text-base text-muted opacity-70;
-  }
-
   /* -------------- */
   /* Buttons        */
   /* -------------- */
+
+  /* Tailwind 4 gives buttons the default cursor */
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 
   .btn {
     @apply inline-flex items-center justify-center gap-1 rounded-lg px-6 py-5 font-exteded leading-none outline-offset-2 transition-colors duration-200;
@@ -180,6 +253,43 @@
 
   .btn-primary {
     @apply text-btn-text bg-btn-primary hover:bg-btn-primary-dark focus:bg-btn-primary-dark;
+  }
+}
+
+/* ------------------ */
+/* Inputs             */
+/* ------------------ */
+
+/* In the components layer so these win over the forms plugin's base styles,
+   which Tailwind 4 outputs after ours (textarea, select and placeholders tie
+   on specificity). */
+@layer components {
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    background-color: var(--page);
+    color: var(--body);
+    @apply rounded-lg border-2 border-border bg-page-light px-4 py-3.5 text-body focus:border-primary-dark focus:outline-hidden! focus:ring-0;
+  }
+
+  textarea {
+    @apply min-h-14;
+  }
+
+  input::placeholder {
+    @apply font-mono text-base text-muted opacity-70;
   }
 }
 
@@ -256,45 +366,17 @@ lite-youtube .lyt-visually-hidden {
 }
 
 /* ----------------------- */
-/*  Light Theme (Default)  */
-/* ----------------------- */
-
-:root,
-html[data-theme="light"] {
-  /* Page Backgrounds */
-  --color-page-light: var(--color-white);
-  --color-page: var(--color-stone-100);
-  --color-page-offset: var(--color-stone-200);
-
-  /* Border */
-  --color-border: var(--color-stone-400);
-
-  /* Body Text */
-  --color-body: var(--color-stone-800);
-
-  /* Muted Text */
-  --color-muted: var(--color-stone-600);
-
-  /* Primary Color */
-  --color-primary: var(--color-peach-400);
-  --color-primary-dark: var(--color-peach-800);
-
-  /* Buttons */
-  --color-btn-text: var(--color-body);
-  --color-btn-primary: var(--color-primary);
-  --color-btn-primary-dark: var(--color-primary-dark);
-}
-
-/* ----------------------- */
 /*  Dark                   */
 /* ----------------------- */
 
+/* The light theme is the default in the @theme block above;
+   data-theme="light" keeps it even when the OS prefers dark. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     /* Page Backgrounds */
-    --color-page-light: 40deg 4% 6%;
+    --color-page-light: hsl(40deg 4% 6%);
     --color-page: var(--color-stone-900);
-    --color-page-offset: 40deg 4% 6%;
+    --color-page-offset: hsl(40deg 4% 6%);
 
     /* Border */
     --color-border: var(--color-stone-800);

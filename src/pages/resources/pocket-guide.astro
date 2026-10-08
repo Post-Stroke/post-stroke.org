@@ -6,14 +6,14 @@ import HeadingGroup from "../../components/HeadingGroup.astro";
 <Layout title="The Stroke Recovery Pocket Guide">
   <main class="relative flex-1 overflow-hidden">
     <div
-      class="container relative z-10 flex flex-col items-center gap-4 py-[--container-padding-y] md:gap-7">
+      class="container relative z-10 flex flex-col items-center gap-4 py-(--container-padding-y) md:gap-7">
       <HeadingGroup
         class="items-center text-center"
         heading="The Stroke Recovery Pocket Guide"
       />
 
       <div
-        class="bg-grain relative mx-auto mb-7 h-48 w-full max-w-[62.5rem] overflow-hidden rounded-lg bg-moss-100 sm:aspect-video sm:h-auto md:mb-14 md:rounded-xl">
+        class="bg-grain relative mx-auto mb-7 h-48 w-full max-w-250 overflow-hidden rounded-lg bg-moss-100 sm:aspect-video sm:h-auto md:mb-14 md:rounded-xl">
         <img
           class="absolute inset-0 z-10 h-full w-full object-contain p-5 shadow-xl sm:p-8"
           src="/assets/images/stroke-recovery-pocket-guide.jpg"
@@ -33,7 +33,7 @@ import HeadingGroup from "../../components/HeadingGroup.astro";
         />
       </div>
 
-      <div class="max-w-[40.625rem] text-lg *:mb-[1.3em]">
+      <div class="max-w-162.5 text-lg *:mb-[1.3em]">
         <p>
           To make this eBook as accessible as possible, I made a few versions of
           it to work with different devices.
@@ -42,7 +42,7 @@ import HeadingGroup from "../../components/HeadingGroup.astro";
         <hr class="block border-border" />
 
         <!-- EPUB -->
-        <h2 class="!mb-3 font-exteded text-xl">Smartphones & Tablets</h2>
+        <h2 class="mb-3! font-exteded text-xl">Smartphones & Tablets</h2>
         <p>
           Download this EPUB version if you want to read on your iPhone, iPad,
           or Android device. It supports resizable text for the best reading
@@ -58,7 +58,7 @@ import HeadingGroup from "../../components/HeadingGroup.astro";
         <hr class="block border-border" />
 
         <!-- MOBI -->
-        <h2 class="!mb-3 font-exteded text-xl">Amazon Kindle Devices</h2>
+        <h2 class="mb-3! font-exteded text-xl">Amazon Kindle Devices</h2>
         <p>
           Download this MOBI version if you want to read on your Amazon Kindle
           or Kindle Fire. It supports resizable text for the best reading
@@ -78,7 +78,7 @@ import HeadingGroup from "../../components/HeadingGroup.astro";
         <hr class="block border-border" />
 
         <!-- EPUB -->
-        <h2 class="!mb-3 font-exteded text-xl">Printable PDF</h2>
+        <h2 class="mb-3! font-exteded text-xl">Printable PDF</h2>
         <p>
           Download this PDF version if you prefer to read on a computer or print
           it. You cannot resize the text of a PDF.
@@ -93,10 +93,10 @@ import HeadingGroup from "../../components/HeadingGroup.astro";
     </div>
     <!-- Circles -->
     <div
-      class="absolute -bottom-[500px] -left-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+      class="absolute bottom-[-500px] left-[-250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
     </div>
     <div
-      class="absolute -bottom-[400px] -left-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
+      class="absolute bottom-[-400px] left-[-500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-md:hidden">
     </div>
   </main>
 </Layout>

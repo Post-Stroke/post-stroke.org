@@ -19,7 +19,7 @@ import MiniDonationBar from "../components/MiniDonationBar.astro";
 
     <!-- Intro Section -->
     <section
-      class="container grid gap-x-[--container-padding-x] overflow-hidden text-pretty py-[--container-padding-y] text-lg *:mb-[1.3em] xl:grid-cols-[min(50%,37.5rem),1fr] xl:grid-rows-[repeat(8,auto)]">
+      class="container grid gap-x-(--container-padding-x) overflow-hidden text-pretty py-(--container-padding-y) text-lg *:mb-[1.3em] xl:grid-cols-[min(50%,37.5rem)_1fr] xl:grid-rows-[repeat(8,auto)]">
       <HeadingGroup
         class="mb-7"
         heading="We Need Your Help"
@@ -29,7 +29,7 @@ import MiniDonationBar from "../components/MiniDonationBar.astro";
       <div class="relative justify-self-center xl:col-start-2 xl:row-span-full">
         <DonationEmbed class="relative z-10 my-5 h-max" />
         <div
-          class="absolute -right-[15%] top-[58%] z-0 aspect-square h-auto w-2/3 max-w-[16.875rem] rounded-full border-2 border-border max-sm:hidden xl:top-[55%]">
+          class="absolute right-[-15%] top-[58%] z-0 aspect-square h-auto w-2/3 max-w-67.5 rounded-full border-2 border-border max-sm:hidden xl:top-[55%]">
         </div>
       </div>
 
@@ -52,7 +52,7 @@ import MiniDonationBar from "../components/MiniDonationBar.astro";
         class="mb-20 justify-self-center xl:col-start-2 xl:row-span-full xl:hidden">
         <div class="relative -z-10 inline-block">
           <img
-            class="relative z-10 w-full max-w-[60vw] rounded-b-full md:max-w-[40vw] xl:max-w-[28.125rem]"
+            class="relative z-10 w-full max-w-[60vw] rounded-b-full md:max-w-[40vw] xl:max-w-112.5"
             src="/assets/images/elyse-newland-tanktop-portrait.jpg"
             srcset="/assets/images/elyse-newland-tanktop-portrait.jpg,
                     /assets/images/elyse-newland-tanktop-portrait@2x.jpg 2x"
@@ -63,11 +63,11 @@ import MiniDonationBar from "../components/MiniDonationBar.astro";
           />
 
           <div
-            class="absolute -right-[20%] top-[68%] z-10 aspect-square h-auto w-1/2 max-w-[16.875rem] rounded-full border-2 border-moss-400 xl:top-[65%] xl:w-2/3">
+            class="absolute right-[-20%] top-[68%] z-10 aspect-square h-auto w-1/2 max-w-67.5 rounded-full border-2 border-moss-400 xl:top-[65%] xl:w-2/3">
           </div>
 
           <div
-            class="bg-grain absolute -right-[20%] top-[68%] z-0 aspect-square h-auto w-1/2 max-w-[16.875rem] rounded-full bg-moss-400 xl:top-[65%] xl:w-2/3">
+            class="bg-grain absolute right-[-20%] top-[68%] z-0 aspect-square h-auto w-1/2 max-w-67.5 rounded-full bg-moss-400 xl:top-[65%] xl:w-2/3">
           </div>
         </div>
       </div> -->
@@ -109,7 +109,7 @@ import MiniDonationBar from "../components/MiniDonationBar.astro";
           <span class="sr-only">Elyse Newland</span>
         </p>
         <p
-          class="flex flex-wrap items-center gap-2 font-exteded text-base leading-none tracking-tight md:text-lg">
+          class="flex flex-wrap items-center gap-2 font-exteded text-base tracking-tight max-md:leading-none md:text-lg">
           <span>Founder & Director</span>
           <span class="h-1 w-1 rotate-45 bg-primary-dark"></span>
           <span>OTD, OTR/L, CSRS</span>
@@ -119,14 +119,14 @@ import MiniDonationBar from "../components/MiniDonationBar.astro";
 
     <!-- <section
       class="relative overflow-hidden border-y-2 border-border bg-page-offset">
-      <div class="container relative z-10 py-[--container-padding-y]">
+      <div class="container relative z-10 py-(--container-padding-y)">
         <HeadingGroup
           class="mb-7 items-center text-center md:mb-14"
           heading="Free eBook with Every Donation"
         />
 
         <div
-          class="bg-grain relative mx-auto mb-7 h-48 w-full max-w-[62.5rem] overflow-hidden rounded-lg bg-plum-400 sm:aspect-video sm:h-auto md:mb-14 md:rounded-xl">
+          class="bg-grain relative mx-auto mb-7 h-48 w-full max-w-250 overflow-hidden rounded-lg bg-plum-400 sm:aspect-video sm:h-auto md:mb-14 md:rounded-xl">
           <img
             class="absolute inset-0 z-10 h-full w-full object-contain p-5 shadow-xl sm:p-8"
             src="/assets/images/stroke-recovery-momentum-ebook.png"
@@ -160,7 +160,7 @@ import MiniDonationBar from "../components/MiniDonationBar.astro";
           />
 
           <div
-            class="text-pretty text-lg text-body *:mb-[1.3em] lg:max-w-[36rem]">
+            class="text-pretty text-lg text-body *:mb-[1.3em] lg:max-w-xl">
             <p>
               Physical Therapist, Certified Stroke Rehab Specialist, and stroke
               survivor Stephanie Hopwood is generously donating a copy of her
@@ -185,27 +185,27 @@ import MiniDonationBar from "../components/MiniDonationBar.astro";
         </div>
       </div>
       <div
-        class="absolute -bottom-[500px] -right-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+        class="absolute bottom-[-500px] right-[-250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
       </div>
       <div
-        class="absolute -bottom-[400px] -right-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+        class="absolute bottom-[-400px] right-[-500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
       </div>
     </section> -->
 
     <!-- <section class="relative overflow-hidden">
       <div
-        class="container relative z-10 flex flex-col items-center gap-7 py-[--container-padding-y] md:gap-10">
+        class="container relative z-10 flex flex-col items-center gap-7 py-(--container-padding-y) md:gap-10">
         <HeadingGroup
           class="items-center text-center"
           heading="Watch our Interview with the Author"
         />
 
         <lite-youtube
-          class="w-full max-w-[62.5rem] rounded-lg ![background-image:url('/assets/images/stephanie-interview-video-thumbnail@2x.jpg')] md:rounded-xl"
+          class="w-full max-w-250 rounded-lg bg-[url('/assets/images/stephanie-interview-video-thumbnail@2x.jpg')]! md:rounded-xl"
           videoid="LI77DpXFq1g"
           params="modestbranding=1&rel=0"></lite-youtube>
 
-        <p class="max-w-[40.625rem] text-pretty text-lg">
+        <p class="max-w-162.5 text-pretty text-lg">
           I hope you enjoy this conversation with Stephanie. We'll talk about
           her unique journey as both a stroke survivor and a PT. She also offers
           valuable tips on maintaining momentum in your stroke recovery, even
@@ -213,17 +213,17 @@ import MiniDonationBar from "../components/MiniDonationBar.astro";
         </p>
       </div>
       <div
-        class="absolute -bottom-[500px] -left-[250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+        class="absolute bottom-[-500px] left-[-250px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
       </div>
       <div
-        class="absolute -bottom-[400px] -left-[500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
+        class="absolute bottom-[-400px] left-[-500px] z-0 size-[700px] rounded-full border-2 border-border/50 max-lg:hidden">
       </div>
     </section> -->
 
     <!-- <section class="bg-page-offset">
-      <div class="container py-[--container-padding-y]">
+      <div class="container py-(--container-padding-y)">
         <HeadingGroup
-          class="mb-7 max-w-[42rem] items-center text-center"
+          class="mb-7 max-w-2xl items-center text-center"
           heading="We’re Made Possible By These Amazing Patrons"
           body="We're still amazed at how many generous survivors donate their hard-earned money to directly support our cause each month. We can’t thank you enough ❤️"
         />
